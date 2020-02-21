@@ -1,0 +1,2566 @@
+#Report
+
+
+Topic - Artificial Intelligence
+
+Seed Urls:
+	1. https://en.wikipedia.org/wiki/Artificial_intelligence
+	2. https://www.britannica.com/technology/artificial-intelligence
+	3. https://en.wikipedia.org/wiki/Machine_learning
+	4. https://en.wikipedia.org/wiki/Robot
+	5. https://en.wikipedia.org/wiki/Artificial_neural_network
+	6. https://en.wikipedia.org/wiki/Computer_vision#Recognition
+
+Related Terms:
+
+For the related terms list, I actually provided a different website which has enough AI terms. Crawling that website, I appended all the technical words into my related terms array.
+
+	['Algorithm', 'Bayesian networks', 'Classification', 'Clustering', 'Cognitive computing', 'Computer vision', 'Genetic algorithm', 'Heuristic', 'Image recognition', 'Limited memory', 'Machine translation', 'Pattern recognition', 'Reactive machines', 'Reinforcement learning', 'Structured data', 'Supervised learning', 'Transfer learning', 'Turing Test', 'Unstructured data', 'Unsupervised learning']
+
+How the Crawler is Implemented?
+-> For this assignment, I used 6 seed urls containing abundant links within them. Then I looped through each seed url, and grabbed all the <a href> links and put them in a sublist array. I named this list as finalLinkList. Since I haven�t used the recursive queue approach, I for looped through each seerUrl and pushed all the inclusive href tags separately. For this part I tried using python�s multiprocessing powers. Multiprocessor�s Pool functionality sends through 10 (in my case) urls each time and does all the calculations on it. When 10 urls are sent into the scrape function simultaneously, it grabs each url, counts the occurrence of the related terms and then prints and saves the file locally. If the related terms occurrence was more than 2, then I appended the url to my finalList. I grabbed the title, url, and the word counter and put them in my finalWebpagesList.txt. 
+I used python file handling to write all the url details in the same txt page. I used the Urllib url retrieve command to download the webpages in my local directory.
+
+The multiprocessing made this process significantly faster. I was able to webscrape all the webpages and download them locally within 10 minutes.
+But there are some limitations to using multiprocessing. I couldn�t keep an index of the pages as they are received in 10s and also while writing the report, the statements often get jumbled as the multiprocessor does tries to save multiple lines at once. But the overall result is completely justified and all the results meet the requirements. I will try narrowing down my search parameters and shrinking my related terms list and also refining my seed urls.
+
+
+NUMBER OF PAGES CRAWLED (TOTAL): 3448+
+NUMBER OF PAGES CRAWLED (related): 590
+TIME TAKEN:  10 minutes
+
+URL OF WEBPAGES CRAWLED:
+
+Symbolic artificial intelligence - Wikipedia
+Page counter: 1 Term counter: 11 url: https://en.wikipedia.org//wiki/GOFAI
+
+
+Ontology (information science) - Wikipedia
+Page counter: 2 Term counter: 11 url: https://en.wikipedia.org//wiki/Ontology_(computer_science)
+
+
+Turing completeness - Wikipedia
+Page counter: 3 Term counter: 10 url: https://en.wikipedia.org//wiki/Turing-complete
+
+
+Cognitive science - Wikipedia
+Page counter: 4 Term counter: 34 url: https://en.wikipedia.org//wiki/Cognitive_science
+
+
+Hopfield network - Wikipedia
+Acute myeloid leukemia - Wikipedia
+Page counter: 5 Term counter: 6 url: https://en.wikipedia.org//wiki/Hopfield_nets
+
+
+Page counter: 6 Term counter: 31 url: https://en.wikipedia.org//wiki/Acute_myeloid_leukemia
+
+
+Psychotherapy - Wikipedia
+Artificial intelligence (disambiguation) - Wikipedia
+Page counter: 7 Term counter: 3 url: https://en.wikipedia.org//wiki/Artificial_intelligence_(disambiguation)
+
+
+Expectation–maximization algorithm - Wikipedia
+Page counter: 8 Term counter: 4 url: https://en.wikipedia.org//wiki/Psychotherapy
+
+
+Semantics - Wikipedia
+Page counter: 9 Term counter: 291 url: https://en.wikipedia.org//wiki/Expectation-maximization_algorithm
+
+
+Page counter: 10 Term counter: 2 url: https://en.wikipedia.org//wiki/Semantics
+
+
+Intelligent agent - Wikipedia
+Page counter: 11 Term counter: 5 url: https://en.wikipedia.org//wiki/Intelligent_agents
+
+
+Management science - Wikipedia
+Page counter: 12 Term counter: 3 url: https://en.wikipedia.org//wiki/Management_science
+
+
+Sepp Hochreiter - Wikipedia
+Influence diagram - Wikipedia
+Computational theory of mind - Wikipedia
+Page counter: 13 Term counter: 56 url: https://en.wikipedia.org//wiki/Sepp_Hochreiter
+
+
+Page counter: 14 Term counter: 4 url: https://en.wikipedia.org//wiki/Decision_network
+
+
+Page counter: 15 Term counter: 4 url: https://en.wikipedia.org//wiki/Computationalism
+
+
+Outline of artificial intelligence - Wikipedia
+Page counter: 16 Term counter: 34 url: https://en.wikipedia.org//wiki/Outline_of_artificial_intelligence
+
+
+Expert system - Wikipedia
+Page counter: 17 Term counter: 10 url: https://en.wikipedia.org//wiki/Expert_systems
+
+
+Description logic - Wikipedia
+Soar (cognitive architecture) - Wikipedia
+Page counter: 18 Term counter: 34 url: https://en.wikipedia.org//wiki/Description_logic
+
+
+Page counter: 19 Term counter: 8 url: https://en.wikipedia.org//wiki/Soar_(cognitive_architecture)
+
+
+Dynamic Bayesian network - Wikipedia
+Page counter: 20 Term counter: 12 url: https://en.wikipedia.org//wiki/Dynamic_Bayesian_network
+
+
+Dartmouth College - Wikipedia
+Knowledge representation and reasoning - Wikipedia
+Page counter: 21 Term counter: 41 url: https://en.wikipedia.org//wiki/Dartmouth_College
+
+
+Page counter: 22 Term counter: 53 url: https://en.wikipedia.org//wiki/Knowledge_representation_and_reasoning
+
+
+The Age of Spiritual Machines - Wikipedia
+Watson (computer) - Wikipedia
+Page counter: 23 Term counter: 31 url: https://en.wikipedia.org//wiki/The_Age_of_Spiritual_Machines
+
+
+Page counter: 24 Term counter: 18 url: https://en.wikipedia.org//wiki/IBM_Watson
+
+
+Web Ontology Language - Wikipedia
+Page counter: 25 Term counter: 3 url: https://en.wikipedia.org//wiki/Web_Ontology_Language
+
+
+Automated planning and scheduling - Wikipedia
+Page counter: 26 Term counter: 23 url: https://en.wikipedia.org//wiki/Automated_planning_and_scheduling
+
+
+Stanford University - Wikipedia
+Page counter: 27 Term counter: 6 url: https://en.wikipedia.org//wiki/Stanford_University
+
+
+Cycle (graph theory) - Wikipedia
+Page counter: 28 Term counter: 10 url: https://en.wikipedia.org//wiki/Cycle_(graph_theory)
+
+
+Upper ontology - Wikipedia
+Page counter: 29 Term counter: 15 url: https://en.wikipedia.org//wiki/Upper_ontology
+
+
+Stanford University centers and institutes - Wikipedia
+Page counter: 30 Term counter: 2 url: https://en.wikipedia.org//wiki/Stanford_Artificial_Intelligence_Laboratory
+
+
+Self-driving car - Wikipedia
+Machine learning - Wikipedia
+Page counter: 31 Term counter: 34 url: https://en.wikipedia.org//wiki/Driverless_cars
+
+
+Page counter: 32 Term counter: 384 url: https://en.wikipedia.org//wiki/Machine_learning
+
+
+Wikipedia:Link rot - Wikipedia
+Page counter: 33 Term counter: 3 url: https://en.wikipedia.org//wiki/Wikipedia:Link_rot
+
+
+Markov chain Monte Carlo - Wikipedia
+Page counter: 34 Term counter: 64 url: https://en.wikipedia.org//wiki/Markov_chain_Monte_Carlo
+
+
+AI winter - Wikipedia
+Page counter: 35 Term counter: 27 url: https://en.wikipedia.org//wiki/AI_Winter
+
+
+Ethics - Wikipedia
+Ontology (information science) - Wikipedia
+Page counter: 36 Term counter: 3 url: https://en.wikipedia.org//wiki/Ethics
+
+
+Page counter: 37 Term counter: 11 url: https://en.wikipedia.org//wiki/Domain_ontology
+
+
+Natural language processing - Wikipedia
+Allen Newell - Wikipedia
+Page counter: 38 Term counter: 42 url: https://en.wikipedia.org//wiki/Natural_language_processing
+
+
+Page counter: 39 Term counter: 3 url: https://en.wikipedia.org//wiki/Allen_Newell
+
+
+University of Edinburgh - Wikipedia
+Page counter: 40 Term counter: 3 url: https://en.wikipedia.org//wiki/University_of_Edinburgh
+
+
+Self-driving car - Wikipedia
+Random walk - Wikipedia
+Page counter: 41 Term counter: 34 url: https://en.wikipedia.org//wiki/Self-driving_car
+
+
+Default logic - Wikipedia
+Page counter: 42 Term counter: 9 url: https://en.wikipedia.org//wiki/Random_walk
+
+
+Page counter: 43 Term counter: 9 url: https://en.wikipedia.org//wiki/Default_reasoning
+
+
+Machine ethics - Wikipedia
+Page counter: 44 Term counter: 33 url: https://en.wikipedia.org//wiki/Machine_ethics
+
+
+Computer vision - Wikipedia
+Page counter: 45 Term counter: 176 url: https://en.wikipedia.org//wiki/Computer_vision
+
+
+Carnegie Mellon University - Wikipedia
+Prolog - Wikipedia
+Page counter: 46 Term counter: 3 url: https://en.wikipedia.org//wiki/Carnegie_Mellon_University
+
+
+Page counter: 47 Term counter: 2 url: https://en.wikipedia.org//wiki/Prolog
+
+
+The Singularity Is Near - Wikipedia
+Page counter: 48 Term counter: 8 url: https://en.wikipedia.org//wiki/The_Singularity_is_Near
+
+
+Cyc - Wikipedia
+Page counter: 49 Term counter: 14 url: https://en.wikipedia.org//wiki/Cyc
+
+
+Friendly artificial intelligence - Wikipedia
+Page counter: 50 Term counter: 8 url: https://en.wikipedia.org//wiki/Friendly_AI
+
+
+Tesla, Inc. - Wikipedia
+Robotics - Wikipedia
+Page counter: 51 Term counter: 4 url: https://en.wikipedia.org//wiki/Tesla_Motors
+
+
+Page counter: 52 Term counter: 23 url: https://en.wikipedia.org//wiki/Robotics
+
+
+Logic programming - Wikipedia
+Page counter: 53 Term counter: 13 url: https://en.wikipedia.org//wiki/Logic_programming
+
+
+AI@50 - Wikipedia
+Page counter: 54 Term counter: 2 url: https://en.wikipedia.org//wiki/AI@50
+
+
+Ontology engineering - Wikipedia
+Page counter: 55 Term counter: 34 url: https://en.wikipedia.org//wiki/Ontology_engineering
+
+
+Decision analysis - Wikipedia
+Page counter: 56 Term counter: 3 url: https://en.wikipedia.org//wiki/Decision_analysis
+
+
+Artificial general intelligence - Wikipedia
+Page counter: 57 Term counter: 32 url: https://en.wikipedia.org//wiki/Artificial_general_intelligence
+
+
+Artificial intelligence, situated approach - Wikipedia
+Page counter: 58 Term counter: 2 url: https://en.wikipedia.org//wiki/Situated_artificial_intelligence
+
+
+Symbolic artificial intelligence - Wikipedia
+Page counter: 59 Term counter: 11 url: https://en.wikipedia.org//wiki/Symbolic_artificial_intelligence
+
+
+Massachusetts Institute of Technology - Wikipedia
+Page counter: 60 Term counter: 2 url: https://en.wikipedia.org//wiki/Massachusetts_Institute_of_Technology
+
+
+Apple Inc. - Wikipedia
+Page counter: 61 Term counter: 3 url: https://en.wikipedia.org//wiki/Apple_Inc.
+
+
+Computational intelligence - Wikipedia
+Page counter: 62 Term counter: 11 url: https://en.wikipedia.org//wiki/Computational_intelligence
+
+
+Neats and scruffies - Wikipedia
+Page counter: 63 Term counter: 11 url: https://en.wikipedia.org//wiki/Neats_vs._scruffies
+
+
+Markov decision process - Wikipedia
+Artificial consciousness - Wikipedia
+Page counter: 64 Term counter: 35 url: https://en.wikipedia.org//wiki/Markov_decision_process
+
+
+Page counter: 65 Term counter: 6 url: https://en.wikipedia.org//wiki/Artificial_consciousness
+
+
+Hubert Dreyfus's views on artificial intelligence - Wikipedia
+Page counter: 66 Term counter: 3 url: https://en.wikipedia.org//wiki/Dreyfus%27_critique_of_artificial_intelligence
+
+
+Deep learning - Wikipedia
+Page counter: 67 Term counter: 175 url: https://en.wikipedia.org//wiki/Deep_learning
+
+
+Commonsense knowledge (artificial intelligence) - Wikipedia
+Page counter: 68 Term counter: 2 url: https://en.wikipedia.org//wiki/Commonsense_knowledge_bases
+
+
+Hierarchical control system - Wikipedia
+Hard problem of consciousness - Wikipedia
+Page counter: 69 Term counter: 3 url: https://en.wikipedia.org//wiki/Hierarchical_control_system
+
+
+Page counter: 70 Term counter: 2 url: https://en.wikipedia.org//wiki/Hard_problem_of_consciousness
+
+
+Mechanism design - Wikipedia
+Page counter: 71 Term counter: 10 url: https://en.wikipedia.org//wiki/Mechanism_design
+
+
+PubMed - Wikipedia
+Page counter: 72 Term counter: 4 url: https://en.wikipedia.org//wiki/PubMed_Identifier
+
+
+Douglas Lenat - Wikipedia
+Page counter: 73 Term counter: 25 url: https://en.wikipedia.org//wiki/Doug_Lenat
+
+
+Bayesian network - Wikipedia
+Page counter: 74 Term counter: 89 url: https://en.wikipedia.org//wiki/Bayesian_network
+
+
+Control system - Wikipedia
+Page counter: 75 Term counter: 7 url: https://en.wikipedia.org//wiki/Control_system
+
+
+Statistical classification - Wikipedia
+Page counter: 76 Term counter: 221 url: https://en.wikipedia.org//wiki/Classifier_(mathematics)
+
+
+Diophantine equation - Wikipedia
+IBM - Wikipedia
+Page counter: 77 Term counter: 9 url: https://en.wikipedia.org//wiki/Diophantine_equations
+
+
+Page counter: 78 Term counter: 7 url: https://en.wikipedia.org//wiki/IBM
+
+
+Theory of mind - Wikipedia
+Page counter: 79 Term counter: 2 url: https://en.wikipedia.org//wiki/Theory_of_mind
+
+
+David Berlinski - Wikipedia
+Page counter: 80 Term counter: 11 url: https://en.wikipedia.org//wiki/David_Berlinski
+
+
+Evolutionary algorithm - Wikipedia
+Page counter: 81 Term counter: 172 url: https://en.wikipedia.org//wiki/Evolutionary_algorithm
+
+
+Stock trader - Wikipedia
+Page counter: 82 Term counter: 3 url: https://en.wikipedia.org//wiki/Stock_trader
+
+
+Utility - Wikipedia
+Page counter: 83 Term counter: 2 url: https://en.wikipedia.org//wiki/Utility
+
+
+Pattern matching - Wikipedia
+Page counter: 84 Term counter: 50 url: https://en.wikipedia.org//wiki/Pattern_matching
+
+
+Pattern recognition - Wikipedia
+Page counter: 85 Term counter: 314 url: https://en.wikipedia.org//wiki/Pattern_recognition
+
+
+List of statistical software - Wikipedia
+International Standard Book Number - Wikipedia
+Page counter: 86 Term counter: 6 url: https://en.wikipedia.org//wiki/Statistical_software
+
+
+Page counter: 87 Term counter: 8 url: https://en.wikipedia.org//wiki/International_Standard_Book_Number
+
+
+Multi-agent planning - Wikipedia
+Page counter: 88 Term counter: 3 url: https://en.wikipedia.org//wiki/Multi-agent_planning
+
+
+Philosophy of artificial intelligence - Wikipedia
+Page counter: 89 Term counter: 17 url: https://en.wikipedia.org//wiki/Philosophy_of_artificial_intelligence
+
+
+Information processing - Wikipedia
+Page counter: 90 Term counter: 2 url: https://en.wikipedia.org//wiki/Information_processing
+
+
+Decision tree learning - Wikipedia
+Theorem - Wikipedia
+Page counter: 91 Term counter: 109 url: https://en.wikipedia.org//wiki/Decision_tree_learning
+
+
+Page counter: 92 Term counter: 5 url: https://en.wikipedia.org//wiki/Theorem
+
+
+Behavioral pattern - Wikipedia
+Page counter: 93 Term counter: 3 url: https://en.wikipedia.org//wiki/Behavioral_pattern
+
+
+Ethics of artificial intelligence - Wikipedia
+Logic Theorist - Wikipedia
+Page counter: 94 Term counter: 38 url: https://en.wikipedia.org//wiki/Ethics_of_artificial_intelligence
+
+
+Page counter: 95 Term counter: 5 url: https://en.wikipedia.org//wiki/Logic_Theorist
+
+
+Kernel method - Wikipedia
+Page counter: 96 Term counter: 66 url: https://en.wikipedia.org//wiki/Kernel_methods
+
+
+Emergence - Wikipedia
+Page counter: 97 Term counter: 10 url: https://en.wikipedia.org//wiki/Emergent_behavior
+
+
+Functionalism (philosophy of mind) - Wikipedia
+Page counter: 98 Term counter: 6 url: https://en.wikipedia.org//wiki/Functionalism_(philosophy_of_mind)
+
+
+Existential risk from artificial general intelligence - Wikipedia
+Page counter: 99 Term counter: 24 url: https://en.wikipedia.org//wiki/Existential_risk_from_artificial_general_intelligence
+
+
+DARPA - Wikipedia
+Mixture model - Wikipedia
+Page counter: 100 Term counter: 4 url: https://en.wikipedia.org//wiki/DARPA
+
+
+Page counter: 101 Term counter: 61 url: https://en.wikipedia.org//wiki/Gaussian_mixture_model
+
+
+Evolutionary algorithm - Wikipedia
+Page counter: 102 Term counter: 178 url: https://en.wikipedia.org//wiki/Evolutionary_algorithms
+
+
+Rodney Brooks - Wikipedia
+Mind–body problem - Wikipedia
+Page counter: 103 Term counter: 2 url: https://en.wikipedia.org//wiki/Rodney_Brooks
+
+
+Page counter: 104 Term counter: 2 url: https://en.wikipedia.org//wiki/Mind-body_problem
+
+
+Turing test - Wikipedia
+Page counter: 105 Term counter: 185 url: https://en.wikipedia.org//wiki/Turing_test
+
+
+Naive Bayes classifier - Wikipedia
+Page counter: 106 Term counter: 118 url: https://en.wikipedia.org//wiki/Naive_Bayes_classifier
+
+
+Swarm intelligence - Wikipedia
+Page counter: 107 Term counter: 151 url: https://en.wikipedia.org//wiki/Swarm_intelligence
+
+
+Machine Learning (journal) - Wikipedia
+Page counter: 108 Term counter: 6 url: https://en.wikipedia.org//wiki/Machine_Learning_(journal)
+
+
+Supply and demand - Wikipedia
+Page counter: 109 Term counter: 4 url: https://en.wikipedia.org//wiki/Supply_and_demand
+
+
+Expert system - Wikipedia
+Page counter: 110 Term counter: 10 url: https://en.wikipedia.org//wiki/Expert_system
+
+
+Control theory - Wikipedia
+Page counter: 111 Term counter: 11 url: https://en.wikipedia.org//wiki/Control_theory
+
+
+Dalle Molle Institute for Artificial Intelligence Research - Wikipedia
+Page counter: 112 Term counter: 2 url: https://en.wikipedia.org//wiki/IDSIA
+
+
+Unsupervised learning - Wikipedia
+Chinese room - Wikipedia
+Page counter: 113 Term counter: 126 url: https://en.wikipedia.org//wiki/Unsupervised_learning
+
+
+Page counter: 114 Term counter: 47 url: https://en.wikipedia.org//wiki/Chinese_room
+
+
+Information asymmetry - Wikipedia
+Page counter: 115 Term counter: 3 url: https://en.wikipedia.org//wiki/Information_asymmetry
+
+
+OCLC - Wikipedia
+Page counter: 116 Term counter: 18 url: https://en.wikipedia.org//wiki/OCLC
+
+
+Neuron - Wikipedia
+Hilary Putnam - Wikipedia
+Douglas Lenat - Wikipedia
+Page counter: 117 Term counter: 25 url: https://en.wikipedia.org//wiki/Neuron
+
+
+Page counter: 118 Term counter: 16 url: https://en.wikipedia.org//wiki/Hilary_Putnam
+
+
+Page counter: 119 Term counter: 25 url: https://en.wikipedia.org//wiki/Douglas_Lenat
+
+
+AI control problem - Wikipedia
+Page counter: 120 Term counter: 17 url: https://en.wikipedia.org//wiki/AI_control_problem
+
+
+Supervised learning - Wikipedia
+Page counter: 121 Term counter: 165 url: https://en.wikipedia.org//wiki/Supervised_learning
+
+
+Rational choice theory - Wikipedia
+Research - Wikipedia
+Page counter: 122 Term counter: 5 url: https://en.wikipedia.org//wiki/Rational_choice
+
+
+Page counter: 123 Term counter: 2 url: https://en.wikipedia.org//wiki/Academic_research
+
+
+Connectionism - Wikipedia
+Page counter: 124 Term counter: 7 url: https://en.wikipedia.org//wiki/Connectionism
+
+
+Friendly artificial intelligence - Wikipedia
+Page counter: 125 Term counter: 8 url: https://en.wikipedia.org//wiki/Friendly_artificial_intelligence
+
+
+John Searle - Wikipedia
+Statistical classification - Wikipedia
+Page counter: 126 Term counter: 2 url: https://en.wikipedia.org//wiki/John_Searle
+
+
+Page counter: 127 Term counter: 220 url: https://en.wikipedia.org//wiki/Statistical_classification
+
+
+Rational expectations - Wikipedia
+Page counter: 128 Term counter: 2 url: https://en.wikipedia.org//wiki/Rational_expectations
+
+
+History of artificial intelligence - Wikipedia
+Chinese room - Wikipedia
+Page counter: 129 Term counter: 51 url: https://en.wikipedia.org//wiki/History_of_artificial_intelligence
+
+
+Page counter: 130 Term counter: 47 url: https://en.wikipedia.org//wiki/Strong_AI_hypothesis
+
+
+Hebbian theory - Wikipedia
+Regression analysis - Wikipedia
+Page counter: 131 Term counter: 14 url: https://en.wikipedia.org//wiki/Hebbian_learning
+
+
+Page counter: 132 Term counter: 40 url: https://en.wikipedia.org//wiki/Regression_analysis
+
+
+Fuzzy control system - Wikipedia
+Page counter: 133 Term counter: 8 url: https://en.wikipedia.org//wiki/Fuzzy_system
+
+
+Portfolio optimization - Wikipedia
+Page counter: 134 Term counter: 23 url: https://en.wikipedia.org//wiki/Portfolio_optimization
+
+
+Computational learning theory - Wikipedia
+Page counter: 135 Term counter: 52 url: https://en.wikipedia.org//wiki/Computational_learning_theory
+
+
+Timeline of artificial intelligence - Wikipedia
+Ethics of artificial intelligence - Wikipedia
+Page counter: 136 Term counter: 39 url: https://en.wikipedia.org//wiki/Timeline_of_artificial_intelligence
+
+
+Page counter: 137 Term counter: 38 url: https://en.wikipedia.org//wiki/Robot_rights
+
+
+Very Large Scale Integration - Wikipedia
+Page counter: 138 Term counter: 29 url: https://en.wikipedia.org//wiki/Very-large-scale_integration
+
+
+Counterfactual thinking - Wikipedia
+Page counter: 139 Term counter: 4 url: https://en.wikipedia.org//wiki/Counterfactual_thinking
+
+
+Evolutionary computation - Wikipedia
+Computational complexity - Wikipedia
+Page counter: 140 Term counter: 121 url: https://en.wikipedia.org//wiki/Evolutionary_computation
+
+
+Page counter: 141 Term counter: 65 url: https://en.wikipedia.org//wiki/Computational_complexity
+
+
+Progress in artificial intelligence - Wikipedia
+Page counter: 142 Term counter: 38 url: https://en.wikipedia.org//wiki/Progress_in_artificial_intelligence
+
+
+CiteSeerX - Wikipedia
+Page counter: 143 Term counter: 2 url: https://en.wikipedia.org//wiki/CiteSeerX
+
+
+Computer algebra - Wikipedia
+Page counter: 144 Term counter: 53 url: https://en.wikipedia.org//wiki/Symbolic_computation
+
+
+Perceptron - Wikipedia
+Sample complexity - Wikipedia
+Page counter: 145 Term counter: 116 url: https://en.wikipedia.org//wiki/Perceptron
+
+
+Page counter: 146 Term counter: 63 url: https://en.wikipedia.org//wiki/Sample_complexity
+
+
+AI winter - Wikipedia
+Page counter: 147 Term counter: 27 url: https://en.wikipedia.org//wiki/AI_winter
+
+
+Transhumanism - Wikipedia
+Page counter: 148 Term counter: 2 url: https://en.wikipedia.org//wiki/Transhumanism
+
+
+Nathaniel Rochester (computer scientist) - Wikipedia
+Page counter: 149 Term counter: 2 url: https://en.wikipedia.org//wiki/Nathan_Rochester
+
+
+Mathematical optimization - Wikipedia
+Page counter: 150 Term counter: 183 url: https://en.wikipedia.org//wiki/Optimization_theory
+
+
+Linear regression - Wikipedia
+Wikipedia:Verifiability - Wikipedia
+Page counter: 151 Term counter: 8 url: https://en.wikipedia.org//wiki/Linear_regression
+
+
+Page counter: 152 Term counter: 4 url: https://en.wikipedia.org//wiki/Wikipedia:Verifiability
+
+
+Applications of artificial intelligence - Wikipedia
+Page counter: 153 Term counter: 46 url: https://en.wikipedia.org//wiki/Applications_of_artificial_intelligence
+
+
+Hidden Markov model - Wikipedia
+Page counter: 154 Term counter: 71 url: https://en.wikipedia.org//wiki/Hidden_Markov_model
+
+
+Data mining - Wikipedia
+Page counter: 155 Term counter: 111 url: https://en.wikipedia.org//wiki/Data_mining
+
+
+Alexey Ivakhnenko - Wikipedia
+Page counter: 156 Term counter: 23 url: https://en.wikipedia.org//wiki/Alexey_Grigorevich_Ivakhnenko
+
+
+List of artificial intelligence projects - Wikipedia
+Page counter: 157 Term counter: 20 url: https://en.wikipedia.org//wiki/List_of_artificial_intelligence_projects
+
+
+Decision theory - Wikipedia
+Page counter: 158 Term counter: 28 url: https://en.wikipedia.org//wiki/Decision_theory
+
+
+Parse tree - Wikipedia
+Medical diagnosis - Wikipedia
+Page counter: 159 Term counter: 7 url: https://en.wikipedia.org//wiki/Parse_tree
+
+
+Page counter: 160 Term counter: 32 url: https://en.wikipedia.org//wiki/Medical_diagnosis
+
+
+Teuvo Kohonen - Wikipedia
+Page counter: 161 Term counter: 5 url: https://en.wikipedia.org//wiki/Teuvo_Kohonen
+
+
+List of programming languages for artificial intelligence - Wikipedia
+Page counter: 162 Term counter: 12 url: https://en.wikipedia.org//wiki/List_of_programming_languages_for_artificial_intelligence
+
+
+Kenneth Colby - Wikipedia
+Page counter: 163 Term counter: 10 url: https://en.wikipedia.org//wiki/Kenneth_Colby
+
+
+Stephen Grossberg - Wikipedia
+Page counter: 164 Term counter: 7 url: https://en.wikipedia.org//wiki/Stephen_Grossberg
+
+
+Scientific method - Wikipedia
+Page counter: 165 Term counter: 22 url: https://en.wikipedia.org//wiki/Scientific_method
+
+
+Moore's law - Wikipedia
+Page counter: 166 Term counter: 2 url: https://en.wikipedia.org//wiki/Moore%27s_law
+
+
+ELIZA - Wikipedia
+Page counter: 167 Term counter: 4 url: https://en.wikipedia.org//wiki/ELIZA
+
+
+Computer security - Wikipedia
+Page counter: 168 Term counter: 42 url: https://en.wikipedia.org//wiki/Cybersecurity
+
+
+Kunihiko Fukushima - Wikipedia
+Page counter: 169 Term counter: 12 url: https://en.wikipedia.org//wiki/Kunihiko_Fukushima
+
+
+Formal grammar - Wikipedia
+Page counter: 170 Term counter: 14 url: https://en.wikipedia.org//wiki/Formal_grammar
+
+
+Glossary of artificial intelligence - Wikipedia
+Page counter: 171 Term counter: 588 url: https://en.wikipedia.org//wiki/Glossary_of_artificial_intelligence
+
+
+Explainable artificial intelligence - Wikipedia
+Page counter: 172 Term counter: 18 url: https://en.wikipedia.org//wiki/Explainable_AI
+
+
+Chatbot - Wikipedia
+Superintelligence - Wikipedia
+Page counter: 173 Term counter: 12 url: https://en.wikipedia.org//wiki/Superintelligence
+
+
+Page counter: 174 Term counter: 17 url: https://en.wikipedia.org//wiki/Chatterbot
+
+
+Template:Artificial intelligence - Wikipedia
+Page counter: 175 Term counter: 8 url: https://en.wikipedia.org//wiki/Template:Artificial_intelligence
+
+
+Natural-language user interface - Wikipedia
+Page counter: 176 Term counter: 25 url: https://en.wikipedia.org//wiki/Natural-language_user_interface
+
+
+Denial-of-service attack - Wikipedia
+Page counter: 177 Term counter: 2 url: https://en.wikipedia.org//wiki/Denial-of-service_attack
+
+
+Transistor count - Wikipedia
+Page counter: 178 Term counter: 7 url: https://en.wikipedia.org//wiki/Transistor_count
+
+
+Business - Wikipedia
+Page counter: 179 Term counter: 7 url: https://en.wikipedia.org//wiki/Firm
+
+
+Technological singularity - Wikipedia
+Page counter: 180 Term counter: 15 url: https://en.wikipedia.org//wiki/Technological_singularity
+
+
+Bernard Widrow - Wikipedia
+Page counter: 181 Term counter: 3 url: https://en.wikipedia.org//wiki/Bernard_Widrow
+
+
+Malware - Wikipedia
+Page counter: 182 Term counter: 3 url: https://en.wikipedia.org//wiki/Malware
+
+
+Statistics - Wikipedia
+Page counter: 183 Term counter: 14 url: https://en.wikipedia.org//wiki/Statistics
+
+
+Computer science - Wikipedia
+Page counter: 184 Term counter: 91 url: https://en.wikipedia.org//wiki/Computer_science
+
+
+Cognitive architecture - Wikipedia
+Page counter: 185 Term counter: 20 url: https://en.wikipedia.org//wiki/Cognitive_architecture
+
+
+Steve Omohundro - Wikipedia
+Technological singularity - Wikipedia
+Page counter: 186 Term counter: 13 url: https://en.wikipedia.org//wiki/Steve_Omohundro
+
+
+Page counter: 187 Term counter: 15 url: https://en.wikipedia.org//wiki/Intelligence_explosion
+
+
+Multi-agent system - Wikipedia
+Page counter: 188 Term counter: 19 url: https://en.wikipedia.org//wiki/Multi-agent_system
+
+
+Economics - Wikipedia
+Page counter: 189 Term counter: 14 url: https://en.wikipedia.org//wiki/Economics
+
+
+Mass surveillance in China - Wikipedia
+Page counter: 190 Term counter: 6 url: https://en.wikipedia.org//wiki/Mass_surveillance_in_China
+
+
+Feedforward neural network - Wikipedia
+Page counter: 191 Term counter: 7 url: https://en.wikipedia.org//wiki/Feedforward_neural_network
+
+
+Hybrid intelligent system - Wikipedia
+Page counter: 192 Term counter: 4 url: https://en.wikipedia.org//wiki/Hybrid_intelligent_system
+
+
+Computational complexity theory - Wikipedia
+Page counter: 193 Term counter: 120 url: https://en.wikipedia.org//wiki/Intractably
+
+
+Machine - Wikipedia
+Page counter: 194 Term counter: 2 url: https://en.wikipedia.org//wiki/Machine
+
+
+Mathematical optimization - Wikipedia
+Page counter: 195 Term counter: 183 url: https://en.wikipedia.org//wiki/Mathematical_optimization
+
+
+Marcus Hutter - Wikipedia
+Page counter: 196 Term counter: 8 url: https://en.wikipedia.org//wiki/Marcus_Hutter
+
+
+Recurrent neural network - Wikipedia
+Search algorithm - Wikipedia
+Page counter: 197 Term counter: 156 url: https://en.wikipedia.org//wiki/Search_algorithm
+
+
+Page counter: 198 Term counter: 103 url: https://en.wikipedia.org//wiki/Recurrent_neural_network
+
+
+Intelligent agent - Wikipedia
+Page counter: 199 Term counter: 5 url: https://en.wikipedia.org//wiki/Intelligent_agent
+
+
+Kevin Warwick - Wikipedia
+Page counter: 200 Term counter: 29 url: https://en.wikipedia.org//wiki/Kevin_Warwick
+
+
+Electronic discovery - Wikipedia
+Page counter: 201 Term counter: 9 url: https://en.wikipedia.org//wiki/Electronic_discovery
+
+
+Deep Blue (chess computer) - Wikipedia
+Page counter: 202 Term counter: 4 url: https://en.wikipedia.org//wiki/IBM_Deep_Blue
+
+
+AIXI - Wikipedia
+Page counter: 203 Term counter: 9 url: https://en.wikipedia.org//wiki/AIXI
+
+
+Multilayer perceptron - Wikipedia
+Page counter: 204 Term counter: 62 url: https://en.wikipedia.org//wiki/Multi-layer_perceptron
+
+
+Mind - Wikipedia
+Page counter: 205 Term counter: 2 url: https://en.wikipedia.org//wiki/Human_mind
+
+
+Artificial intelligence in video games - Wikipedia
+Page counter: 206 Term counter: 14 url: https://en.wikipedia.org//wiki/Artificial_intelligence_(video_games)
+
+
+Radial basis function network - Wikipedia
+Page counter: 207 Term counter: 35 url: https://en.wikipedia.org//wiki/Radial_basis_network
+
+
+Aldous Huxley - Wikipedia
+Page counter: 208 Term counter: 2 url: https://en.wikipedia.org//wiki/Aldous_Huxley
+
+
+Intelligent control - Wikipedia
+Page counter: 209 Term counter: 17 url: https://en.wikipedia.org//wiki/Intelligent_control
+
+
+Optical character recognition - Wikipedia
+Pathfinding - Wikipedia
+Page counter: 210 Term counter: 37 url: https://en.wikipedia.org//wiki/Optical_character_recognition
+
+
+Page counter: 211 Term counter: 156 url: https://en.wikipedia.org//wiki/Pathfinding
+
+
+Group method of data handling - Wikipedia
+Page counter: 212 Term counter: 47 url: https://en.wikipedia.org//wiki/GMDH
+
+
+Local search (optimization) - Wikipedia
+Page counter: 213 Term counter: 45 url: https://en.wikipedia.org//wiki/Local_search_(optimization)
+
+
+Natural-language understanding - Wikipedia
+Page counter: 214 Term counter: 15 url: https://en.wikipedia.org//wiki/Natural_language_understanding
+
+
+Left 4 Dead - Wikipedia
+Edward Fredkin - Wikipedia
+Page counter: 215 Term counter: 2 url: https://en.wikipedia.org//wiki/Left_4_Dead
+
+
+Page counter: 216 Term counter: 2 url: https://en.wikipedia.org//wiki/Edward_Fredkin
+
+
+Competitive learning - Wikipedia
+Page counter: 217 Term counter: 19 url: https://en.wikipedia.org//wiki/Competitive_learning
+
+
+Question answering - Wikipedia
+Page counter: 218 Term counter: 14 url: https://en.wikipedia.org//wiki/Question_answering_system
+
+
+Samuel Butler (novelist) - Wikipedia
+Page counter: 219 Term counter: 2 url: https://en.wikipedia.org//wiki/Samuel_Butler_(novelist)
+
+
+Large numbers - Wikipedia
+Page counter: 220 Term counter: 3 url: https://en.wikipedia.org//wiki/Astronomically_large
+
+
+Artificial intelligence arms race - Wikipedia
+Watson (computer) - Wikipedia
+Backpropagation - Wikipedia
+Page counter: 221 Term counter: 11 url: https://en.wikipedia.org//wiki/Artificial_intelligence_arms_race
+
+
+Page counter: 222 Term counter: 18 url: https://en.wikipedia.org//wiki/Watson_(artificial_intelligence_software)
+
+
+Page counter: 223 Term counter: 87 url: https://en.wikipedia.org//wiki/Backpropagation
+
+
+Chess - Wikipedia
+Page counter: 224 Term counter: 4 url: https://en.wikipedia.org//wiki/Chess
+
+
+George Dyson (science historian) - Wikipedia
+Page counter: 225 Term counter: 3 url: https://en.wikipedia.org//wiki/George_Dyson_(science_historian)
+
+
+Time complexity - Wikipedia
+Page counter: 226 Term counter: 170 url: https://en.wikipedia.org//wiki/Computation_time
+
+
+Automatic differentiation - Wikipedia
+Page counter: 227 Term counter: 16 url: https://en.wikipedia.org//wiki/Automatic_differentiation
+
+
+Go (game) - Wikipedia
+Page counter: 228 Term counter: 8 url: https://en.wikipedia.org//wiki/Go_(game)
+
+
+Heuristic - Wikipedia
+Page counter: 229 Term counter: 258 url: https://en.wikipedia.org//wiki/Heuristics
+
+
+Seppo Linnainmaa - Wikipedia
+Page counter: 230 Term counter: 2 url: https://en.wikipedia.org//wiki/Seppo_Linnainmaa
+
+
+Unemployment - Wikipedia
+Page counter: 231 Term counter: 4 url: https://en.wikipedia.org//wiki/Unemployment
+
+
+Decision tree pruning - Wikipedia
+Page counter: 232 Term counter: 20 url: https://en.wikipedia.org//wiki/Pruning_(algorithm)
+
+
+Kinect - Wikipedia
+Page counter: 233 Term counter: 2 url: https://en.wikipedia.org//wiki/Kinect
+
+
+Productivity - Wikipedia
+Page counter: 234 Term counter: 6 url: https://en.wikipedia.org//wiki/Productivity
+
+
+Personality computing - Wikipedia
+Search tree - Wikipedia
+Self-driving car - Wikipedia
+Page counter: 235 Term counter: 3 url: https://en.wikipedia.org//wiki/Personality_computing
+
+
+Page counter: 236 Term counter: 12 url: https://en.wikipedia.org//wiki/Search_tree
+
+
+Page counter: 237 Term counter: 34 url: https://en.wikipedia.org//wiki/Autonomous_car
+
+
+Hierarchical temporal memory - Wikipedia
+Page counter: 238 Term counter: 56 url: https://en.wikipedia.org//wiki/Hierarchical_temporal_memory
+
+
+Computer art - Wikipedia
+Hill climbing - Wikipedia
+Page counter: 239 Term counter: 13 url: https://en.wikipedia.org//wiki/Computer_art
+
+
+Page counter: 240 Term counter: 171 url: https://en.wikipedia.org//wiki/Hill_climbing
+
+
+Content delivery network - Wikipedia
+Page counter: 241 Term counter: 10 url: https://en.wikipedia.org//wiki/Content_delivery_network
+
+
+DeepDream - Wikipedia
+Page counter: 242 Term counter: 57 url: https://en.wikipedia.org//wiki/DeepDream
+
+
+Simulated annealing - Wikipedia
+Page counter: 243 Term counter: 99 url: https://en.wikipedia.org//wiki/Simulated_annealing
+
+
+Military simulation - Wikipedia
+Page counter: 244 Term counter: 12 url: https://en.wikipedia.org//wiki/Military_simulations
+
+
+Gradient descent - Wikipedia
+Page counter: 245 Term counter: 129 url: https://en.wikipedia.org//wiki/Gradient_descent
+
+
+Beam search - Wikipedia
+Page counter: 246 Term counter: 76 url: https://en.wikipedia.org//wiki/Beam_search
+
+
+List of cognitive biases - Wikipedia
+Page counter: 247 Term counter: 25 url: https://en.wikipedia.org//wiki/List_of_cognitive_biases
+
+
+Virtual assistant - Wikipedia
+Page counter: 248 Term counter: 6 url: https://en.wikipedia.org//wiki/Intelligent_personal_assistant
+
+
+Logic - Wikipedia
+Random optimization - Wikipedia
+Page counter: 249 Term counter: 5 url: https://en.wikipedia.org//wiki/Logic
+
+
+Page counter: 250 Term counter: 14 url: https://en.wikipedia.org//wiki/Random_optimization
+
+
+Uber - Wikipedia
+Page counter: 251 Term counter: 8 url: https://en.wikipedia.org//wiki/Uber
+
+
+File:ParticleSwarmArrowsAnimation.gif - Wikipedia
+Mind–body dualism - Wikipedia
+Page counter: 252 Term counter: 2 url: https://en.wikipedia.org//wiki/File:ParticleSwarmArrowsAnimation.gif
+
+
+Page counter: 253 Term counter: 4 url: https://en.wikipedia.org//wiki/Substance_dualism
+
+
+Science fiction - Wikipedia
+Page counter: 254 Term counter: 5 url: https://en.wikipedia.org//wiki/Science_fiction
+
+
+Semantic network - Wikipedia
+Artificial neural network - Wikipedia
+Page counter: 255 Term counter: 12 url: https://en.wikipedia.org//wiki/Semantic_network
+
+
+Page counter: 256 Term counter: 217 url: https://en.wikipedia.org//wiki/Artificial_neural_network
+
+
+Neuroevolution - Wikipedia
+Page counter: 257 Term counter: 72 url: https://en.wikipedia.org//wiki/Neuroevolution
+
+
+Richard Neapolitan - Wikipedia
+Page counter: 258 Term counter: 25 url: https://en.wikipedia.org//wiki/Richard_Neapolitan
+
+
+Abstract and concrete - Wikipedia
+Page counter: 259 Term counter: 3 url: https://en.wikipedia.org//wiki/Abstract_and_concrete
+
+
+Consciousness - Wikipedia
+Page counter: 260 Term counter: 16 url: https://en.wikipedia.org//wiki/Consciousness
+
+
+Particle swarm optimization - Wikipedia
+Page counter: 261 Term counter: 149 url: https://en.wikipedia.org//wiki/Particle_swarm_optimization
+
+
+Automated reasoning - Wikipedia
+Page counter: 262 Term counter: 36 url: https://en.wikipedia.org//wiki/Automated_reasoning
+
+
+AlphaGo - Wikipedia
+Cognition - Wikipedia
+Page counter: 263 Term counter: 22 url: https://en.wikipedia.org//wiki/AlphaGo
+
+
+Page counter: 264 Term counter: 4 url: https://en.wikipedia.org//wiki/Cognition
+
+
+Philosophy of mind - Wikipedia
+Page counter: 265 Term counter: 3 url: https://en.wikipedia.org//wiki/Philosophy_of_mind
+
+
+Rina Dechter - Wikipedia
+Page counter: 266 Term counter: 4 url: https://en.wikipedia.org//wiki/Rina_Dechter
+
+
+Knowledge representation and reasoning - Wikipedia
+Page counter: 267 Term counter: 53 url: https://en.wikipedia.org//wiki/Knowledge_representation
+
+
+Cognitive closure (philosophy) - Wikipedia
+Page counter: 268 Term counter: 2 url: https://en.wikipedia.org//wiki/Cognitive_closure_(philosophy)
+
+
+Sentience - Wikipedia
+Page counter: 269 Term counter: 2 url: https://en.wikipedia.org//wiki/Sentience
+
+
+Machine perception - Wikipedia
+Page counter: 270 Term counter: 5 url: https://en.wikipedia.org//wiki/Machine_perception
+
+
+Genetic algorithm - Wikipedia
+Page counter: 271 Term counter: 649 url: https://en.wikipedia.org//wiki/Genetic_algorithms
+
+
+Computer Go - Wikipedia
+Page counter: 272 Term counter: 34 url: https://en.wikipedia.org//wiki/Computer_Go
+
+
+Information engineering (field) - Wikipedia
+Page counter: 273 Term counter: 32 url: https://en.wikipedia.org//wiki/Information_engineering_(field)
+
+
+Geoffrey Hinton - Wikipedia
+Page counter: 274 Term counter: 18 url: https://en.wikipedia.org//wiki/Geoffrey_Hinton
+
+
+Gene expression programming - Wikipedia
+Page counter: 275 Term counter: 142 url: https://en.wikipedia.org//wiki/Gene_expression_programming
+
+
+HAL 9000 - Wikipedia
+Page counter: 276 Term counter: 4 url: https://en.wikipedia.org//wiki/HAL_9000
+
+
+Restricted Boltzmann machine - Wikipedia
+Page counter: 277 Term counter: 65 url: https://en.wikipedia.org//wiki/Restricted_Boltzmann_machine
+
+
+Mathematics - Wikipedia
+Page counter: 278 Term counter: 13 url: https://en.wikipedia.org//wiki/Mathematics
+
+
+Hubert Dreyfus's views on artificial intelligence - Wikipedia
+Page counter: 279 Term counter: 3 url: https://en.wikipedia.org//wiki/Dreyfus%27_critique_of_AI
+
+
+Genetic programming - Wikipedia
+Page counter: 280 Term counter: 85 url: https://en.wikipedia.org//wiki/Genetic_programming
+
+
+The Emperor's New Mind - Wikipedia
+Page counter: 281 Term counter: 13 url: https://en.wikipedia.org//wiki/The_Emperor%27s_New_Mind
+
+
+Convolutional neural network - Wikipedia
+Page counter: 282 Term counter: 149 url: https://en.wikipedia.org//wiki/Convolutional_neural_network
+
+
+Flocking (behavior) - Wikipedia
+Page counter: 283 Term counter: 13 url: https://en.wikipedia.org//wiki/Flocking_(behavior)
+
+
+Psychology - Wikipedia
+Page counter: 284 Term counter: 10 url: https://en.wikipedia.org//wiki/Psychology
+
+
+The Terminator - Wikipedia
+Page counter: 285 Term counter: 4 url: https://en.wikipedia.org//wiki/The_Terminator
+
+
+Neocognitron - Wikipedia
+Page counter: 286 Term counter: 12 url: https://en.wikipedia.org//wiki/Neocognitron
+
+
+Computing Machinery and Intelligence - Wikipedia
+Page counter: 287 Term counter: 15 url: https://en.wikipedia.org//wiki/Computing_Machinery_and_Intelligence
+
+
+Ant colony optimization algorithms - Wikipedia
+Page counter: 288 Term counter: 345 url: https://en.wikipedia.org//wiki/Ant_colony_optimization
+
+
+Yann LeCun - Wikipedia
+Linguistics - Wikipedia
+Page counter: 289 Term counter: 18 url: https://en.wikipedia.org//wiki/Yann_LeCun
+
+
+Page counter: 290 Term counter: 4 url: https://en.wikipedia.org//wiki/Linguistics
+
+
+The Matrix - Wikipedia
+Page counter: 291 Term counter: 5 url: https://en.wikipedia.org//wiki/The_Matrix
+
+
+Recurrent neural network - Wikipedia
+Ant - Wikipedia
+Page counter: 292 Term counter: 103 url: https://en.wikipedia.org//wiki/Recurrent_neural_networks
+
+
+Page counter: 293 Term counter: 8 url: https://en.wikipedia.org//wiki/Ant_trail
+
+
+Philosophy - Wikipedia
+Page counter: 294 Term counter: 3 url: https://en.wikipedia.org//wiki/Philosophy
+
+
+The Day the Earth Stood Still - Wikipedia
+Page counter: 295 Term counter: 4 url: https://en.wikipedia.org//wiki/The_Day_the_Earth_Stood_Still
+
+
+Hubert Dreyfus - Wikipedia
+Page counter: 296 Term counter: 3 url: https://en.wikipedia.org//wiki/Hubert_Dreyfus
+
+
+Satplan - Wikipedia
+Page counter: 297 Term counter: 3 url: https://en.wikipedia.org//wiki/Satplan
+
+
+Vanishing gradient problem - Wikipedia
+Page counter: 298 Term counter: 53 url: https://en.wikipedia.org//wiki/Vanishing_gradient_problem
+
+
+Language of thought hypothesis - Wikipedia
+Page counter: 299 Term counter: 2 url: https://en.wikipedia.org//wiki/Language_of_thought_hypothesis
+
+
+Blink: The Power of Thinking Without Thinking - Wikipedia
+Inductive logic programming - Wikipedia
+Page counter: 300 Term counter: 10 url: https://en.wikipedia.org//wiki/Blink_(book)
+
+
+Google - Wikipedia
+Page counter: 301 Term counter: 5 url: https://en.wikipedia.org//wiki/Inductive_logic_programming
+
+
+Page counter: 302 Term counter: 4 url: https://en.wikipedia.org//wiki/Google
+
+
+Long short-term memory - Wikipedia
+Page counter: 303 Term counter: 52 url: https://en.wikipedia.org//wiki/Long_short-term_memory
+
+
+Mind - Wikipedia
+Page counter: 304 Term counter: 2 url: https://en.wikipedia.org//wiki/Mind
+
+
+Ray Solomonoff - Wikipedia
+Page counter: 305 Term counter: 54 url: https://en.wikipedia.org//wiki/Ray_Solomonoff
+
+
+Connectionist temporal classification - Wikipedia
+Page counter: 306 Term counter: 41 url: https://en.wikipedia.org//wiki/Connectionist_temporal_classification
+
+
+Isaac Asimov - Wikipedia
+Page counter: 307 Term counter: 6 url: https://en.wikipedia.org//wiki/Isaac_Asimov
+
+
+Propositional calculus - Wikipedia
+Page counter: 308 Term counter: 7 url: https://en.wikipedia.org//wiki/Propositional_logic
+
+
+Roger Penrose - Wikipedia
+China - Wikipedia
+Page counter: 309 Term counter: 10 url: https://en.wikipedia.org//wiki/Roger_Penrose
+
+
+Three Laws of Robotics - Wikipedia
+Page counter: 310 Term counter: 5 url: https://en.wikipedia.org//wiki/China
+
+
+Page counter: 311 Term counter: 2 url: https://en.wikipedia.org//wiki/Three_Laws_of_Robotics
+
+
+Philosophy of artificial intelligence - Wikipedia
+Page counter: 312 Term counter: 17 url: https://en.wikipedia.org//wiki/Philosophy_of_AI
+
+
+Competitions and prizes in artificial intelligence - Wikipedia
+Page counter: 313 Term counter: 9 url: https://en.wikipedia.org//wiki/Competitions_and_prizes_in_artificial_intelligence
+
+
+Mind–body problem - Wikipedia
+Page counter: 314 Term counter: 2 url: https://en.wikipedia.org//wiki/Mind%E2%80%93body_problem
+
+
+Utility - Wikipedia
+Page counter: 315 Term counter: 2 url: https://en.wikipedia.org//wiki/Utility_function
+
+
+Ray Kurzweil - Wikipedia
+Page counter: 316 Term counter: 5 url: https://en.wikipedia.org//wiki/Ray_Kurzweil
+
+
+AlphaZero - Wikipedia
+First-order logic - Wikipedia
+Page counter: 317 Term counter: 19 url: https://en.wikipedia.org//wiki/AlphaZero
+
+
+Page counter: 318 Term counter: 9 url: https://en.wikipedia.org//wiki/First-order_logic
+
+
+Deep Blue (chess computer) - Wikipedia
+Page counter: 319 Term counter: 4 url: https://en.wikipedia.org//wiki/Deep_Blue_(chess_computer)
+
+
+Reinforcement learning - Wikipedia
+Robotics - Wikipedia
+Page counter: 320 Term counter: 186 url: https://en.wikipedia.org//wiki/Reinforcement_learning
+
+
+Page counter: 321 Term counter: 23 url: https://en.wikipedia.org//wiki/Robotic
+
+
+Andrew Ng - Wikipedia
+Quantifier (logic) - Wikipedia
+Page counter: 322 Term counter: 19 url: https://en.wikipedia.org//wiki/Andrew_Ng
+
+
+Page counter: 323 Term counter: 2 url: https://en.wikipedia.org//wiki/Quantifier_(logic)
+
+
+Global catastrophic risk - Wikipedia
+Fitness function - Wikipedia
+Page counter: 324 Term counter: 40 url: https://en.wikipedia.org//wiki/Fitness_function
+
+
+Page counter: 325 Term counter: 11 url: https://en.wikipedia.org//wiki/Existential_risk
+
+
+Predicate (mathematical logic) - Wikipedia
+Page counter: 326 Term counter: 2 url: https://en.wikipedia.org//wiki/Predicate_(mathematical_logic)
+
+
+Esports - Wikipedia
+Page counter: 327 Term counter: 4 url: https://en.wikipedia.org//wiki/Esports
+
+
+Computer performance - Wikipedia
+Page counter: 328 Term counter: 3 url: https://en.wikipedia.org//wiki/Computer_performance
+
+
+Algorithm - Wikipedia
+Page counter: 329 Term counter: 839 url: https://en.wikipedia.org//wiki/Algorithms
+
+
+Fuzzy set - Wikipedia
+Page counter: 330 Term counter: 6 url: https://en.wikipedia.org//wiki/Fuzzy_set_theory
+
+
+Problem of other minds - Wikipedia
+Page counter: 331 Term counter: 2 url: https://en.wikipedia.org//wiki/Problem_of_other_minds
+
+
+Big data - Wikipedia
+Page counter: 332 Term counter: 25 url: https://en.wikipedia.org//wiki/Big_data
+
+
+Fuzzy logic - Wikipedia
+Page counter: 333 Term counter: 30 url: https://en.wikipedia.org//wiki/Fuzzy_logic
+
+
+ImageNet - Wikipedia
+Page counter: 334 Term counter: 34 url: https://en.wikipedia.org//wiki/ImageNet
+
+
+Heuristic (computer science) - Wikipedia
+Page counter: 335 Term counter: 172 url: https://en.wikipedia.org//wiki/Heuristic_(computer_science)
+
+
+A.I. Artificial Intelligence - Wikipedia
+Page counter: 336 Term counter: 10 url: https://en.wikipedia.org//wiki/A.I._Artificial_Intelligence
+
+
+Default logic - Wikipedia
+Page counter: 337 Term counter: 9 url: https://en.wikipedia.org//wiki/Default_logic
+
+
+CAPTCHA - Wikipedia
+Page counter: 338 Term counter: 29 url: https://en.wikipedia.org//wiki/CAPTCHA
+
+
+Stephen Hawking - Wikipedia
+Page counter: 339 Term counter: 2 url: https://en.wikipedia.org//wiki/Stephen_Hawking
+
+
+Software engineering - Wikipedia
+Page counter: 340 Term counter: 30 url: https://en.wikipedia.org//wiki/Software_engineering
+
+
+Ex Machina (film) - Wikipedia
+Page counter: 341 Term counter: 11 url: https://en.wikipedia.org//wiki/Ex_Machina_(film)
+
+
+Tabula rasa - Wikipedia
+Page counter: 342 Term counter: 6 url: https://en.wikipedia.org//wiki/Tabula_rasa
+
+
+Function (mathematics) - Wikipedia
+Clark Glymour - Wikipedia
+Page counter: 343 Term counter: 3 url: https://en.wikipedia.org//wiki/Function_(mathematics)
+
+
+Page counter: 344 Term counter: 3 url: https://en.wikipedia.org//wiki/Clark_Glymour
+
+
+Kolmogorov complexity - Wikipedia
+Page counter: 345 Term counter: 46 url: https://en.wikipedia.org//wiki/Kolmogorov_complexity
+
+
+Operations research - Wikipedia
+Page counter: 346 Term counter: 8 url: https://en.wikipedia.org//wiki/Operations_research
+
+
+Understanding - Wikipedia
+Page counter: 347 Term counter: 5 url: https://en.wikipedia.org//wiki/Understanding
+
+
+Mind (journal) - Wikipedia
+Page counter: 348 Term counter: 2 url: https://en.wikipedia.org//wiki/Mind_(journal)
+
+
+Nils John Nilsson - Wikipedia
+Combinatorial explosion - Wikipedia
+Page counter: 349 Term counter: 8 url: https://en.wikipedia.org//wiki/Nils_Nilsson_(researcher)
+
+
+Page counter: 350 Term counter: 2 url: https://en.wikipedia.org//wiki/Combinatorial_explosion
+
+
+Philosophical zombie - Wikipedia
+Page counter: 351 Term counter: 5 url: https://en.wikipedia.org//wiki/Philosophical_zombie
+
+
+Virtual assistant - Wikipedia
+Page counter: 352 Term counter: 6 url: https://en.wikipedia.org//wiki/Automated_online_assistant
+
+
+Index of philosophy of mind articles - Wikipedia
+Page counter: 353 Term counter: 2 url: https://en.wikipedia.org//wiki/Index_of_philosophy_of_mind_articles
+
+
+History of artificial intelligence - Wikipedia
+Page counter: 354 Term counter: 51 url: https://en.wikipedia.org//wiki/History_of_AI
+
+
+Denver - Wikipedia
+Page counter: 355 Term counter: 9 url: https://en.wikipedia.org//wiki/Denver
+
+
+Unmanned aerial vehicle - Wikipedia
+Page counter: 356 Term counter: 22 url: https://en.wikipedia.org//wiki/Unmanned_aerial_vehicle
+
+
+Portal:Computer programming - Wikipedia
+Page counter: 357 Term counter: 47 url: https://en.wikipedia.org//wiki/Portal:Computer_programming
+
+
+Metaphysics - Wikipedia
+Page counter: 358 Term counter: 4 url: https://en.wikipedia.org//wiki/Metaphysics
+
+
+Belief revision - Wikipedia
+Carnegie Mellon University - Wikipedia
+Page counter: 359 Term counter: 4 url: https://en.wikipedia.org//wiki/Belief_revision
+
+
+Page counter: 360 Term counter: 3 url: https://en.wikipedia.org//wiki/Carnegie_Tech
+
+
+Abductive reasoning - Wikipedia
+Philosophy of information - Wikipedia
+Page counter: 361 Term counter: 19 url: https://en.wikipedia.org//wiki/Abductive_reasoning
+
+
+Page counter: 362 Term counter: 4 url: https://en.wikipedia.org//wiki/Philosophy_of_information
+
+
+Self-driving car - Wikipedia
+Page counter: 363 Term counter: 34 url: https://en.wikipedia.org//wiki/Self-driving_cars
+
+
+New York City - Wikipedia
+Page counter: 364 Term counter: 8 url: https://en.wikipedia.org//wiki/New_York_City
+
+
+SRI International - Wikipedia
+Page counter: 365 Term counter: 2 url: https://en.wikipedia.org//wiki/SRI_International
+
+
+Alan Bundy - Wikipedia
+Page counter: 366 Term counter: 2 url: https://en.wikipedia.org//wiki/Alan_Bundy
+
+
+Global catastrophic risk - Wikipedia
+Page counter: 367 Term counter: 11 url: https://en.wikipedia.org//wiki/Global_catastrophic_risk
+
+
+Behavior selection algorithm - Wikipedia
+Page counter: 368 Term counter: 44 url: https://en.wikipedia.org//wiki/Behavior_selection_algorithm
+
+
+Google Search - Wikipedia
+Page counter: 369 Term counter: 51 url: https://en.wikipedia.org//wiki/Google_search
+
+
+Artificial general intelligence - Wikipedia
+Page counter: 370 Term counter: 32 url: https://en.wikipedia.org//wiki/Artificial_being
+
+
+Business process automation - Wikipedia
+Page counter: 371 Term counter: 4 url: https://en.wikipedia.org//wiki/Business_process_automation
+
+
+San Francisco - Wikipedia
+Forward chaining - Wikipedia
+Page counter: 372 Term counter: 3 url: https://en.wikipedia.org//wiki/Forward_chaining
+
+
+Page counter: 373 Term counter: 10 url: https://en.wikipedia.org//wiki/San_Francisco
+
+
+Siri - Wikipedia
+Page counter: 374 Term counter: 6 url: https://en.wikipedia.org//wiki/Siri
+
+
+Case-based reasoning - Wikipedia
+Page counter: 375 Term counter: 25 url: https://en.wikipedia.org//wiki/Case-based_reasoning
+
+
+Nick Bostrom - Wikipedia
+Page counter: 376 Term counter: 4 url: https://en.wikipedia.org//wiki/Nick_Bostrom
+
+
+Kalman filter - Wikipedia
+Page counter: 377 Term counter: 31 url: https://en.wikipedia.org//wiki/Kalman_filter
+
+
+A* search algorithm - Wikipedia
+Page counter: 378 Term counter: 322 url: https://en.wikipedia.org//wiki/A*_search_algorithm
+
+
+Alex Pentland - Wikipedia
+Page counter: 379 Term counter: 2 url: https://en.wikipedia.org//wiki/Alex_Pentland
+
+
+Emergent algorithm - Wikipedia
+Page counter: 380 Term counter: 69 url: https://en.wikipedia.org//wiki/Emergent_algorithm
+
+
+Horn clause - Wikipedia
+Page counter: 381 Term counter: 2 url: https://en.wikipedia.org//wiki/Horn_clause
+
+
+State space search - Wikipedia
+Page counter: 382 Term counter: 26 url: https://en.wikipedia.org//wiki/State_space_search
+
+
+Human Compatible - Wikipedia
+Page counter: 383 Term counter: 2 url: https://en.wikipedia.org//wiki/Human_Compatible
+
+
+Algorithm - Wikipedia
+Page counter: 384 Term counter: 834 url: https://en.wikipedia.org//wiki/Algorithm
+
+
+Deepfake - Wikipedia
+Frankenstein - Wikipedia
+Page counter: 385 Term counter: 13 url: https://en.wikipedia.org//wiki/Deepfake
+
+
+Page counter: 386 Term counter: 5 url: https://en.wikipedia.org//wiki/Frankenstein
+
+
+Wikipedia:WikiProject Philosophy/Mind - Wikipedia
+Influenza - Wikipedia
+Page counter: 387 Term counter: 10 url: https://en.wikipedia.org//wiki/Influenza
+
+
+Particle filter - Wikipedia
+Page counter: 388 Term counter: 106 url: https://en.wikipedia.org//wiki/Particle_filter
+
+
+Breadth-first search - Wikipedia
+Page counter: 389 Term counter: 82 url: https://en.wikipedia.org//wiki/Breadth_first_search
+
+
+Stuart J. Russell - Wikipedia
+Page counter: 390 Term counter: 3 url: https://en.wikipedia.org//wiki/Stuart_J._Russell
+
+
+Herbert Spencer - Wikipedia
+Page counter: 391 Term counter: 5 url: https://en.wikipedia.org//wiki/Herbert_Spencer
+
+
+Utility - Wikipedia
+Page counter: 392 Term counter: 2 url: https://en.wikipedia.org//wiki/Utility_theory
+
+
+Depth-first search - Wikipedia
+Bayesian inference - Wikipedia
+Reinforcement learning - Wikipedia
+Page counter: 393 Term counter: 102 url: https://en.wikipedia.org//wiki/Depth_first_search
+
+
+Page counter: 394 Term counter: 17 url: https://en.wikipedia.org//wiki/Bayesian_inference
+
+
+Page counter: 395 Term counter: 186 url: https://en.wikipedia.org//wiki/Reward_function
+
+
+Alison Gopnik - Wikipedia
+Page counter: 396 Term counter: 4 url: https://en.wikipedia.org//wiki/Alison_Gopnik
+
+
+File:EM Clustering of Old Faithful data.gif - Wikipedia
+Page counter: 397 Term counter: 59 url: https://en.wikipedia.org//wiki/File:EM_Clustering_of_Old_Faithful_data.gif
+
+
+Heuristic - Wikipedia
+Page counter: 398 Term counter: 253 url: https://en.wikipedia.org//wiki/Heuristic
+
+
+Algorithm characterizations - Wikipedia
+Page counter: 399 Term counter: 272 url: https://en.wikipedia.org//wiki/Algorithm_characterizations
+
+
+OpenAI - Wikipedia
+Support-vector machine - Wikipedia
+Page counter: 400 Term counter: 13 url: https://en.wikipedia.org//wiki/OpenAI
+
+
+Page counter: 401 Term counter: 172 url: https://en.wikipedia.org//wiki/Support_vector_machine
+
+
+Best-first search - Wikipedia
+Page counter: 402 Term counter: 80 url: https://en.wikipedia.org//wiki/Best-first_search
+
+
+Artificial Intelligence: A Modern Approach - Wikipedia
+Page counter: 403 Term counter: 5 url: https://en.wikipedia.org//wiki/Artificial_Intelligence:_A_Modern_Approach
+
+
+Expectation–maximization algorithm - Wikipedia
+Page counter: 404 Term counter: 287 url: https://en.wikipedia.org//wiki/Expectation-maximization
+
+
+Charles Sanders Peirce - Wikipedia
+Page counter: 405 Term counter: 22 url: https://en.wikipedia.org//wiki/Charles_Sanders_Peirce
+
+
+k-nearest neighbors algorithm - Wikipedia
+Page counter: 406 Term counter: 231 url: https://en.wikipedia.org//wiki/K-nearest_neighbor_algorithm
+
+
+Neats and scruffies - Wikipedia
+Page counter: 407 Term counter: 11 url: https://en.wikipedia.org//wiki/Neats_and_scruffies
+
+
+Artificial life - Wikipedia
+Page counter: 408 Term counter: 41 url: https://en.wikipedia.org//wiki/Artificial_life
+
+
+Tractatus Logico-Philosophicus - Wikipedia
+Page counter: 409 Term counter: 6 url: https://en.wikipedia.org//wiki/Tractatus_Logico-Philosophicus
+
+
+Latent variable - Wikipedia
+Page counter: 410 Term counter: 14 url: https://en.wikipedia.org//wiki/Latent_variables
+
+
+Neuron - Wikipedia
+Page counter: 411 Term counter: 25 url: https://en.wikipedia.org//wiki/Neurons
+
+
+Alan Turing - Wikipedia
+Page counter: 412 Term counter: 26 url: https://en.wikipedia.org//wiki/Alan_Turing
+
+
+Hilbert's program - Wikipedia
+Page counter: 413 Term counter: 14 url: https://en.wikipedia.org//wiki/Hilbert%27s_program
+
+
+Constructivist epistemology - Wikipedia
+Cognition - Wikipedia
+Page counter: 414 Term counter: 4 url: https://en.wikipedia.org//wiki/Cognitive_abilities
+
+
+Page counter: 415 Term counter: 2 url: https://en.wikipedia.org//wiki/Constructivist_epistemology
+
+
+Vicarious (company) - Wikipedia
+Page counter: 416 Term counter: 5 url: https://en.wikipedia.org//wiki/Vicarious_(company)
+
+
+Henri Poincaré - Wikipedia
+Page counter: 417 Term counter: 2 url: https://en.wikipedia.org//wiki/Henri_Poincar%C3%A9
+
+
+Computer data storage - Wikipedia
+Page counter: 418 Term counter: 4 url: https://en.wikipedia.org//wiki/Computer_data_storage
+
+
+Family (biology) - Wikipedia
+Page counter: 419 Term counter: 16 url: https://en.wikipedia.org//wiki/Family_(biology)
+
+
+Theory of computation - Wikipedia
+Page counter: 420 Term counter: 9 url: https://en.wikipedia.org//wiki/Theory_of_computation
+
+
+Gödel's incompleteness theorems - Wikipedia
+Page counter: 421 Term counter: 9 url: https://en.wikipedia.org//wiki/G%C3%B6del%27s_incompleteness_theorems
+
+
+World Brain - Wikipedia
+Page counter: 422 Term counter: 6 url: https://en.wikipedia.org//wiki/World_Brain
+
+
+Social software - Wikipedia
+Page counter: 423 Term counter: 3 url: https://en.wikipedia.org//wiki/Social_software
+
+
+Bill Hibbard - Wikipedia
+Page counter: 424 Term counter: 2 url: https://en.wikipedia.org//wiki/Bill_Hibbard
+
+
+Pain - Wikipedia
+Page counter: 425 Term counter: 26 url: https://en.wikipedia.org//wiki/Pain
+
+
+Rudolf Steiner - Wikipedia
+Page counter: 426 Term counter: 2 url: https://en.wikipedia.org//wiki/Rudolf_Steiner
+
+
+Memex - Wikipedia
+Page counter: 427 Term counter: 7 url: https://en.wikipedia.org//wiki/Memex
+
+
+Overfitting - Wikipedia
+Page counter: 428 Term counter: 14 url: https://en.wikipedia.org//wiki/Overfitting
+
+
+Geographic information system - Wikipedia
+Page counter: 429 Term counter: 19 url: https://en.wikipedia.org//wiki/Geographic_information_system
+
+
+General Problem Solver - Wikipedia
+Page counter: 430 Term counter: 11 url: https://en.wikipedia.org//wiki/General_Problem_Solver
+
+
+Karl Pearson - Wikipedia
+Hypothetico-deductive model - Wikipedia
+Page counter: 431 Term counter: 5 url: https://en.wikipedia.org//wiki/Karl_Pearson
+
+
+Page counter: 432 Term counter: 2 url: https://en.wikipedia.org//wiki/Hypothetico-deductive_model
+
+
+Decision support system - Wikipedia
+Page counter: 433 Term counter: 8 url: https://en.wikipedia.org//wiki/Decision_support_system
+
+
+Word-sense disambiguation - Wikipedia
+Page counter: 434 Term counter: 77 url: https://en.wikipedia.org//wiki/Disambiguation
+
+
+Case-based reasoning - Wikipedia
+Commonsense reasoning - Wikipedia
+Page counter: 435 Term counter: 25 url: https://en.wikipedia.org//wiki/Case_based_reasoning
+
+
+Page counter: 436 Term counter: 16 url: https://en.wikipedia.org//wiki/Commonsense_reasoning
+
+
+Three-dimensional integrated circuit - Wikipedia
+Page counter: 437 Term counter: 2 url: https://en.wikipedia.org//wiki/Three-dimensional_integrated_circuit
+
+
+Semantic Web - Wikipedia
+Page counter: 438 Term counter: 11 url: https://en.wikipedia.org//wiki/Semantic_Web
+
+
+Process control - Wikipedia
+Page counter: 439 Term counter: 2 url: https://en.wikipedia.org//wiki/Process_control
+
+
+Equality (mathematics) - Wikipedia
+Page counter: 440 Term counter: 3 url: https://en.wikipedia.org//wiki/Equality_(mathematics)
+
+
+Evi (software) - Wikipedia
+Page counter: 441 Term counter: 6 url: https://en.wikipedia.org//wiki/Evi_(software)
+
+
+Folk psychology - Wikipedia
+Page counter: 442 Term counter: 4 url: https://en.wikipedia.org//wiki/Folk_psychology
+
+
+WolframAlpha - Wikipedia
+Page counter: 443 Term counter: 9 url: https://en.wikipedia.org//wiki/Wolfram_Alpha
+
+
+Artificial imagination - Wikipedia
+Page counter: 444 Term counter: 12 url: https://en.wikipedia.org//wiki/Artificial_Imagination
+
+
+List of emerging technologies - Wikipedia
+Bayesian inference - Wikipedia
+Page counter: 445 Term counter: 10 url: https://en.wikipedia.org//wiki/List_of_emerging_technologies
+
+
+Page counter: 446 Term counter: 17 url: https://en.wikipedia.org//wiki/Bayesian_learning
+
+
+Digital library - Wikipedia
+Page counter: 447 Term counter: 34 url: https://en.wikipedia.org//wiki/Digital_library
+
+
+Fallibilism - Wikipedia
+Page counter: 448 Term counter: 3 url: https://en.wikipedia.org//wiki/Fallibilism
+
+
+Watson (computer) - Wikipedia
+Albert Einstein - Wikipedia
+Computing platform - Wikipedia
+Page counter: 449 Term counter: 18 url: https://en.wikipedia.org//wiki/Watson_(computer)
+
+
+Page counter: 450 Term counter: 2 url: https://en.wikipedia.org//wiki/Albert_Einstein
+
+
+Page counter: 451 Term counter: 29 url: https://en.wikipedia.org//wiki/Computing_platform
+
+
+Bayes estimator - Wikipedia
+Page counter: 452 Term counter: 3 url: https://en.wikipedia.org//wiki/Bayesian_decision_theory
+
+
+Probability - Wikipedia
+Creativity - Wikipedia
+Page counter: 453 Term counter: 3 url: https://en.wikipedia.org//wiki/Probability
+
+
+Page counter: 454 Term counter: 7 url: https://en.wikipedia.org//wiki/Creativity
+
+
+Knowledge Graph - Wikipedia
+Page counter: 455 Term counter: 7 url: https://en.wikipedia.org//wiki/Knowledge_Graph
+
+
+Alternating decision tree - Wikipedia
+Page counter: 456 Term counter: 30 url: https://en.wikipedia.org//wiki/Alternating_decision_tree
+
+
+Outline of robotics - Wikipedia
+Page counter: 457 Term counter: 10 url: https://en.wikipedia.org//wiki/Outline_of_robotics
+
+
+Commonsense knowledge (artificial intelligence) - Wikipedia
+Page counter: 458 Term counter: 2 url: https://en.wikipedia.org//wiki/Commonsense_knowledge
+
+
+C. D. Broad - Wikipedia
+Page counter: 459 Term counter: 2 url: https://en.wikipedia.org//wiki/C._D._Broad
+
+
+Hebbian theory - Wikipedia
+Wikidata - Wikipedia
+Page counter: 460 Term counter: 14 url: https://en.wikipedia.org//wiki/Hebbian_theory
+
+
+Page counter: 461 Term counter: 6 url: https://en.wikipedia.org//wiki/Wikidata
+
+
+Bertram Raphael - Wikipedia
+Page counter: 462 Term counter: 3 url: https://en.wikipedia.org//wiki/Bertram_Raphael
+
+
+Computer security - Wikipedia
+Page counter: 463 Term counter: 42 url: https://en.wikipedia.org//wiki/Computer_security
+
+
+Knowledge engineering - Wikipedia
+Page counter: 464 Term counter: 7 url: https://en.wikipedia.org//wiki/Knowledge_engineering
+
+
+Hopfield network - Wikipedia
+Page counter: 465 Term counter: 6 url: https://en.wikipedia.org//wiki/Hopfield_network
+
+
+Cortana - Wikipedia
+Index of robotics articles - Wikipedia
+Page counter: 466 Term counter: 6 url: https://en.wikipedia.org//wiki/Cortana
+
+
+Page counter: 467 Term counter: 37 url: https://en.wikipedia.org//wiki/Index_of_robotics_articles
+
+
+Category:Existential risk from artificial general intelligence - Wikipedia
+Page counter: 468 Term counter: 3 url: https://en.wikipedia.org//wiki/Category:Existential_risk_from_artificial_general_intelligence
+
+
+Cryptography - Wikipedia
+Page counter: 469 Term counter: 83 url: https://en.wikipedia.org//wiki/Cryptography
+
+
+Jürgen Schmidhuber - Wikipedia
+Page counter: 470 Term counter: 23 url: https://en.wikipedia.org//wiki/J%C3%BCrgen_Schmidhuber
+
+
+Viv (software) - Wikipedia
+Page counter: 471 Term counter: 6 url: https://en.wikipedia.org//wiki/Viv_(software)
+
+
+History of robots - Wikipedia
+Page counter: 472 Term counter: 3 url: https://en.wikipedia.org//wiki/History_of_robots
+
+
+Formal methods - Wikipedia
+David Silver (computer scientist) - Wikipedia
+Page counter: 473 Term counter: 30 url: https://en.wikipedia.org//wiki/Formal_methods
+
+
+Page counter: 474 Term counter: 9 url: https://en.wikipedia.org//wiki/David_Silver_(programmer)
+
+
+Glossary of astronomy - Wikipedia
+Page counter: 475 Term counter: 23 url: https://en.wikipedia.org//wiki/Glossary_of_astronomy
+
+
+The Engine - Wikipedia
+Page counter: 476 Term counter: 6 url: https://en.wikipedia.org//wiki/The_Engine
+
+
+Gulliver's Travels - Wikipedia
+Page counter: 477 Term counter: 8 url: https://en.wikipedia.org//wiki/Gulliver%27s_Travels
+
+
+Glossary of biology - Wikipedia
+Page counter: 478 Term counter: 5 url: https://en.wikipedia.org//wiki/Glossary_of_biology
+
+
+Intrusion detection system - Wikipedia
+Page counter: 479 Term counter: 19 url: https://en.wikipedia.org//wiki/Intrusion_detection_system
+
+
+A Logic Named Joe - Wikipedia
+Page counter: 480 Term counter: 6 url: https://en.wikipedia.org//wiki/A_Logic_Named_Joe
+
+
+Catastrophe theory - Wikipedia
+Page counter: 481 Term counter: 3 url: https://en.wikipedia.org//wiki/Catastrophe_theory
+
+
+Computer security compromised by hardware failure - Wikipedia
+Laws of robotics - Wikipedia
+Page counter: 482 Term counter: 2 url: https://en.wikipedia.org//wiki/Laws_of_robotics
+
+
+Page counter: 483 Term counter: 37 url: https://en.wikipedia.org//wiki/Computer_security_compromised_by_hardware_failure
+
+
+Snow Crash - Wikipedia
+Page counter: 484 Term counter: 11 url: https://en.wikipedia.org//wiki/Snow_Crash
+
+
+Demis Hassabis - Wikipedia
+Page counter: 485 Term counter: 8 url: https://en.wikipedia.org//wiki/Demis_Hassabis
+
+
+Glossary of botanical terms - Wikipedia
+Page counter: 486 Term counter: 4 url: https://en.wikipedia.org//wiki/Glossary_of_botany
+
+
+Willard Van Orman Quine - Wikipedia
+Page counter: 487 Term counter: 7 url: https://en.wikipedia.org//wiki/Willard_Van_Orman_Quine
+
+
+The Baroque Cycle - Wikipedia
+Page counter: 488 Term counter: 6 url: https://en.wikipedia.org//wiki/The_Baroque_Cycle
+
+
+Glossary of calculus - Wikipedia
+Information security - Wikipedia
+Page counter: 489 Term counter: 8 url: https://en.wikipedia.org//wiki/Glossary_of_calculus
+
+
+Page counter: 490 Term counter: 57 url: https://en.wikipedia.org//wiki/Information_security
+
+
+List of fictional computers - Wikipedia
+International Standard Serial Number - Wikipedia
+Page counter: 491 Term counter: 8 url: https://en.wikipedia.org//wiki/List_of_fictional_computers
+
+
+Page counter: 492 Term counter: 6 url: https://en.wikipedia.org//wiki/International_Standard_Serial_Number
+
+
+Association for Computing Machinery - Wikipedia
+Page counter: 493 Term counter: 10 url: https://en.wikipedia.org//wiki/Association_for_Computing_Machinery
+
+
+Imre Lakatos - Wikipedia
+Page counter: 494 Term counter: 10 url: https://en.wikipedia.org//wiki/Imre_Lakatos
+
+
+Template:Computer science - Wikipedia
+Robot - Wikipedia
+Page counter: 495 Term counter: 29 url: https://en.wikipedia.org//wiki/Template:Computer_science
+
+
+Page counter: 496 Term counter: 6 url: https://en.wikipedia.org//wiki/Robot
+
+
+Biocybernetics - Wikipedia
+Page counter: 497 Term counter: 3 url: https://en.wikipedia.org//wiki/Biocybernetics
+
+
+Interaction design - Wikipedia
+Page counter: 498 Term counter: 6 url: https://en.wikipedia.org//wiki/Interaction_design
+
+
+Humanoid robot - Wikipedia
+Page counter: 499 Term counter: 5 url: https://en.wikipedia.org//wiki/Humanoid_robot
+
+
+Glossary of civil engineering - Wikipedia
+Page counter: 500 Term counter: 4 url: https://en.wikipedia.org//wiki/Glossary_of_civil_engineering
+
+
+ACM Computing Classification System - Wikipedia
+Page counter: 501 Term counter: 115 url: https://en.wikipedia.org//wiki/ACM_Computing_Classification_System
+
+
+Wikipedia:Community portal - Wikipedia
+Page counter: 502 Term counter: 7 url: https://en.wikipedia.org//wiki/Wikipedia:Community_portal
+
+
+Computer hardware - Wikipedia
+Ubiquitous computing - Wikipedia
+Page counter: 503 Term counter: 29 url: https://en.wikipedia.org//wiki/Computer_hardware
+
+
+Page counter: 504 Term counter: 29 url: https://en.wikipedia.org//wiki/Ubiquitous_computing
+
+
+Claytronics - Wikipedia
+Page counter: 505 Term counter: 15 url: https://en.wikipedia.org//wiki/Claytronics
+
+
+Glossary of computer hardware terms - Wikipedia
+Page counter: 506 Term counter: 2 url: https://en.wikipedia.org//wiki/Glossary_of_computer_hardware_terms
+
+
+Printed circuit board - Wikipedia
+Page counter: 507 Term counter: 4 url: https://en.wikipedia.org//wiki/Printed_circuit_board
+
+
+Igor Aleksander - Wikipedia
+Page counter: 508 Term counter: 3 url: https://en.wikipedia.org//wiki/Igor_Aleksander
+
+
+Peripheral - Wikipedia
+Page counter: 509 Term counter: 29 url: https://en.wikipedia.org//wiki/Peripheral
+
+
+Glossary of computer science - Wikipedia
+Page counter: 510 Term counter: 186 url: https://en.wikipedia.org//wiki/Glossary_of_computer_science
+
+
+Category:Philosophy of science - Wikipedia
+Page counter: 511 Term counter: 6 url: https://en.wikipedia.org//wiki/Category:Philosophy_of_science
+
+
+Pages that link to "Artificial intelligence" - Wikipedia
+Page counter: 512 Term counter: 18 url: https://en.wikipedia.org//wiki/Special:WhatLinksHere/Artificial_intelligence
+
+
+Glossary of ecology - Wikipedia
+Integrated circuit - Wikipedia
+Brain–computer interface - Wikipedia
+Page counter: 513 Term counter: 4 url: https://en.wikipedia.org//wiki/Glossary_of_ecology
+
+
+Page counter: 514 Term counter: 29 url: https://en.wikipedia.org//wiki/Integrated_circuit
+
+
+Page counter: 515 Term counter: 14 url: https://en.wikipedia.org//wiki/Brain%E2%80%93computer_interface
+
+
+Garbage collection (computer science) - Wikipedia
+Page counter: 516 Term counter: 19 url: https://en.wikipedia.org//wiki/Garbage_collection_(computer_science)
+
+
+Very Large Scale Integration - Wikipedia
+Page counter: 517 Term counter: 29 url: https://en.wikipedia.org//wiki/Very_Large_Scale_Integration
+
+
+Glossary of economics - Wikipedia
+Page counter: 518 Term counter: 12 url: https://en.wikipedia.org//wiki/Glossary_of_economics
+
+
+Lisp (programming language) - Wikipedia
+Page counter: 519 Term counter: 6 url: https://en.wikipedia.org//wiki/Lisp_(programming_language)
+
+
+Template:Evolutionary computation - Wikipedia
+Page counter: 520 Term counter: 26 url: https://en.wikipedia.org//wiki/Template:Evolutionary_computation
+
+
+Emergence - Wikipedia
+Page counter: 521 Term counter: 10 url: https://en.wikipedia.org//wiki/Emergence
+
+
+System on a chip - Wikipedia
+Page counter: 522 Term counter: 56 url: https://en.wikipedia.org//wiki/System_on_a_chip
+
+
+Vitalism - Wikipedia
+Glossary of electrical and electronics engineering - Wikipedia
+Page counter: 523 Term counter: 2 url: https://en.wikipedia.org//wiki/Vitalism
+
+
+Page counter: 524 Term counter: 5 url: https://en.wikipedia.org//wiki/Glossary_of_electrical_and_electronics_engineering
+
+
+Convergence (evolutionary computing) - Wikipedia
+McCarthy 91 function - Wikipedia
+Page counter: 525 Term counter: 34 url: https://en.wikipedia.org//wiki/Convergence_(evolutionary_computing)
+
+
+Page counter: 526 Term counter: 9 url: https://en.wikipedia.org//wiki/McCarthy_91_function
+
+
+Green computing - Wikipedia
+Page counter: 527 Term counter: 49 url: https://en.wikipedia.org//wiki/Green_computing
+
+
+Evolutionary data mining - Wikipedia
+Page counter: 528 Term counter: 41 url: https://en.wikipedia.org//wiki/Evolutionary_data_mining
+
+
+W. Ross Ashby - Wikipedia
+Page counter: 529 Term counter: 3 url: https://en.wikipedia.org//wiki/W._Ross_Ashby
+
+
+Electronic design automation - Wikipedia
+Page counter: 530 Term counter: 35 url: https://en.wikipedia.org//wiki/Electronic_design_automation
+
+
+Daniel Dennett - Wikipedia
+Page counter: 531 Term counter: 5 url: https://en.wikipedia.org//wiki/Daniel_Dennett
+
+
+Evolutionary multimodal optimization - Wikipedia
+Page counter: 532 Term counter: 221 url: https://en.wikipedia.org//wiki/Evolutionary_multimodal_optimization
+
+
+Hardware acceleration - Wikipedia
+Page counter: 533 Term counter: 16 url: https://en.wikipedia.org//wiki/Hardware_acceleration
+
+
+Gregory Bateson - Wikipedia
+Page counter: 534 Term counter: 3 url: https://en.wikipedia.org//wiki/Gregory_Bateson
+
+
+Human-based evolutionary computation - Wikipedia
+Page counter: 535 Term counter: 53 url: https://en.wikipedia.org//wiki/Human-based_evolutionary_computation
+
+
+Consciousness Explained - Wikipedia
+Page counter: 536 Term counter: 5 url: https://en.wikipedia.org//wiki/Consciousness_Explained
+
+
+Computer architecture - Wikipedia
+Interactive evolutionary computation - Wikipedia
+Page counter: 537 Term counter: 29 url: https://en.wikipedia.org//wiki/Computer_architecture
+
+
+Behaviorism - Wikipedia
+Page counter: 538 Term counter: 69 url: https://en.wikipedia.org//wiki/Interactive_evolutionary_computation
+
+
+Page counter: 539 Term counter: 5 url: https://en.wikipedia.org//wiki/Behaviorism
+
+
+Disability robot - Wikipedia
+Page counter: 540 Term counter: 3 url: https://en.wikipedia.org//wiki/Disability_robot
+
+
+artificial intelligence | Definition, Examples, and Applications | Britannica
+Page counter: 541 Term counter: 5 url: https://www.britannica.com//technology/artificial-intelligence
+
+
+Cellular evolutionary algorithm - Wikipedia
+Page counter: 542 Term counter: 97 url: https://en.wikipedia.org//wiki/Cellular_evolutionary_algorithm
+
+
+Embedded system - Wikipedia
+Page counter: 543 Term counter: 29 url: https://en.wikipedia.org//wiki/Embedded_system
+
+
+Philosophy of biology - Wikipedia
+Page counter: 544 Term counter: 2 url: https://en.wikipedia.org//wiki/Philosophy_of_biology
+
+
+Real-time computing - Wikipedia
+Page counter: 545 Term counter: 37 url: https://en.wikipedia.org//wiki/Real-time_computing
+
+
+CMA-ES - Wikipedia
+Page counter: 546 Term counter: 85 url: https://en.wikipedia.org//wiki/CMA-ES
+
+
+Cognitive psychology - Wikipedia
+Page counter: 547 Term counter: 3 url: https://en.wikipedia.org//wiki/Cognitive_psychology
+
+
+Dependability - Wikipedia
+Page counter: 548 Term counter: 29 url: https://en.wikipedia.org//wiki/Dependability
+
+
+Differential evolution - Wikipedia
+Page counter: 549 Term counter: 102 url: https://en.wikipedia.org//wiki/Differential_evolution
+
+
+BEAM robotics - Wikipedia
+Page counter: 550 Term counter: 2 url: https://en.wikipedia.org//wiki/BEAM_robotics
+
+
+Mind–body dualism - Wikipedia
+Page counter: 551 Term counter: 4 url: https://en.wikipedia.org//wiki/Mind%E2%80%93body_dualism
+
+
+Computer network - Wikipedia
+Page counter: 552 Term counter: 45 url: https://en.wikipedia.org//wiki/Computer_network
+
+
+Pedro Domingos - Wikipedia
+Page counter: 553 Term counter: 11 url: https://en.wikipedia.org//wiki/Pedro_Domingos
+
+
+Soft robotics - Wikipedia
+Artificial intelligence - Alan Turing and the beginning of AI | Britannica
+Page counter: 554 Term counter: 3 url: https://en.wikipedia.org//wiki/Soft_robotics
+
+
+Page counter: 555 Term counter: 5 url: https://www.britannica.com//technology/artificial-intelligence/Alan-Turing-and-the-beginning-of-AI
+
+
+Network architecture - Wikipedia
+Page counter: 556 Term counter: 31 url: https://en.wikipedia.org//wiki/Network_architecture
+
+
+The Master Algorithm - Wikipedia
+Page counter: 557 Term counter: 92 url: https://en.wikipedia.org//wiki/The_Master_Algorithm
+
+
+Philosophy of computer science - Wikipedia
+Page counter: 558 Term counter: 31 url: https://en.wikipedia.org//wiki/Philosophy_of_computer_science
+
+
+Artificial intelligence - The Turing test | Britannica
+Page counter: 559 Term counter: 22 url: https://www.britannica.com//technology/artificial-intelligence/The-Turing-test
+
+
+Communication protocol - Wikipedia
+Page counter: 560 Term counter: 42 url: https://en.wikipedia.org//wiki/Network_protocol
+
+
+Networking hardware - Wikipedia
+Page counter: 561 Term counter: 31 url: https://en.wikipedia.org//wiki/Networking_hardware
+
+
+Artificial intelligence - Evolutionary computing | Britannica
+Page counter: 562 Term counter: 10 url: https://www.britannica.com//technology/artificial-intelligence/Evolutionary-computing
+
+
+Mobile robot - Wikipedia
+Page counter: 563 Term counter: 8 url: https://en.wikipedia.org//wiki/Mobile_robot
+
+
+Network scheduler - Wikipedia
+Page counter: 564 Term counter: 52 url: https://en.wikipedia.org//wiki/Network_scheduler
+
+
+Artificial intelligence - Expert systems | Britannica
+Network performance - Wikipedia
+Page counter: 565 Term counter: 34 url: https://en.wikipedia.org//wiki/Network_performance
+
+
+Page counter: 566 Term counter: 4 url: https://www.britannica.com//technology/artificial-intelligence/Expert-systems
+
+
+Index of philosophy of science articles - Wikipedia
+Page counter: 567 Term counter: 3 url: https://en.wikipedia.org//wiki/Index_of_philosophy_of_science_articles
+
+
+Network service - Wikipedia
+Page counter: 568 Term counter: 29 url: https://en.wikipedia.org//wiki/Network_service
+
+
+Artificial intelligence - Connectionism | Britannica
+Hubert Dreyfus's views on artificial intelligence - Wikipedia
+Page counter: 569 Term counter: 3 url: https://en.wikipedia.org//wiki/What_Computers_Can%27t_Do
+
+
+Page counter: 570 Term counter: 2 url: https://www.britannica.com//technology/artificial-intelligence/Connectionism
+
+
+Interpreter (computing) - Wikipedia
+Page counter: 571 Term counter: 30 url: https://en.wikipedia.org//wiki/Interpreter_(computing)
+
+
+Robotic spacecraft - Wikipedia
+Page counter: 572 Term counter: 4 url: https://en.wikipedia.org//wiki/Robotic_spacecraft
+
+
+Middleware - Wikipedia
+Page counter: 573 Term counter: 29 url: https://en.wikipedia.org//wiki/Middleware
+
+
+Virtual machine - Wikipedia
+Page counter: 574 Term counter: 30 url: https://en.wikipedia.org//wiki/Virtual_machine
+
+
+Swarm robotics - Wikipedia
+Page counter: 575 Term counter: 7 url: https://en.wikipedia.org//wiki/Swarm_robotics
+
+
+Artificial intelligence - Is strong AI possible? | Britannica
+Page counter: 576 Term counter: 3 url: https://www.britannica.com//technology/artificial-intelligence/Is-strong-AI-possible
+
+
+Autonomous underwater vehicle - Wikipedia
+Page counter: 577 Term counter: 2 url: https://en.wikipedia.org//wiki/Autonomous_underwater_vehicle
+
+
+Operating system - Wikipedia
+Page counter: 578 Term counter: 35 url: https://en.wikipedia.org//wiki/Operating_system
+
+
+Francis Heylighen - Wikipedia
+Page counter: 579 Term counter: 2 url: https://en.wikipedia.org//wiki/Francis_Heylighen
+
+
+computer | History, Networking, Operating Systems, & Facts | Britannica
+Page counter: 580 Term counter: 2 url: https://www.britannica.com/technology/computer
+
+
+Remotely operated underwater vehicle - Wikipedia
+Software quality - Wikipedia
+Page counter: 581 Term counter: 14 url: https://en.wikipedia.org//wiki/Remotely_operated_underwater_vehicle
+
+
+Page counter: 582 Term counter: 35 url: https://en.wikipedia.org//wiki/Software_quality
+
+
+History of science - Wikipedia
+Page counter: 583 Term counter: 9 url: https://en.wikipedia.org//wiki/History_of_science
+
+
+Robot locomotion - Wikipedia
+Programming language theory - Wikipedia
+Page counter: 584 Term counter: 4 url: https://en.wikipedia.org//wiki/Robot_locomotion
+
+
+Page counter: 585 Term counter: 7 url: https://en.wikipedia.org//wiki/Programming_language_theory
+
+
+History of evolutionary thought - Wikipedia
+Page counter: 586 Term counter: 8 url: https://en.wikipedia.org//wiki/History_of_evolutionary_thought
+
+
+Legged robot - Wikipedia
+digital computer | Evolution, Components, & Features | Britannica
+Programming paradigm - Wikipedia
+Page counter: 587 Term counter: 4 url: https://en.wikipedia.org//wiki/Legged_robot
+
+
+Page counter: 588 Term counter: 73 url: https://en.wikipedia.org//wiki/Programming_paradigm
+
+
+Page counter: 589 Term counter: 5 url: https://www.britannica.com/technology/digital-computer
+
+
+Pseudoscience - Wikipedia
+Page counter: 590 Term counter: 6 url: https://en.wikipedia.org//wiki/Pseudoscience
+
+
+Programming language - Wikipedia
+Page counter: 591 Term counter: 31 url: https://en.wikipedia.org//wiki/Programming_language
+
+
+BEAM robotics - Wikipedia
+Page counter: 592 Term counter: 2 url: https://en.wikipedia.org//wiki/Climber_(BEAM)
+
+
+Compiler - Wikipedia
+Page counter: 593 Term counter: 8 url: https://en.wikipedia.org//wiki/Compiler_construction
+
+
+Robot navigation - Wikipedia
+Page counter: 594 Term counter: 8 url: https://en.wikipedia.org//wiki/Robot_navigation
+
+
+Domain-specific language - Wikipedia
+Page counter: 595 Term counter: 35 url: https://en.wikipedia.org//wiki/Domain-specific_language
+
+
+Modeling language - Wikipedia
+Page counter: 596 Term counter: 3 url: https://en.wikipedia.org//wiki/Modeling_language
+
+
+Warren Sturgis McCulloch - Wikipedia
+Page counter: 597 Term counter: 3 url: https://en.wikipedia.org//wiki/Warren_Sturgis_McCulloch
+
+
+Software framework - Wikipedia
+Page counter: 598 Term counter: 2 url: https://en.wikipedia.org//wiki/Software_framework
+
+
+insect | Definition, Facts, & Classification | Britannica
+Page counter: 599 Term counter: 9 url: https://www.britannica.com/animal/insect
+
+
+Robot software - Wikipedia
+Page counter: 600 Term counter: 4 url: https://en.wikipedia.org//wiki/Robot_software
+
+
+Software repository - Wikipedia
+Page counter: 601 Term counter: 4 url: https://en.wikipedia.org//wiki/Software_repository
+
+
+Aristotle - Wikipedia
+Page counter: 602 Term counter: 6 url: https://en.wikipedia.org//wiki/Aristotle
+
+
+Software development - Wikipedia
+Page counter: 603 Term counter: 30 url: https://en.wikipedia.org//wiki/Software_development
+
+
+Requirements analysis - Wikipedia
+Page counter: 604 Term counter: 29 url: https://en.wikipedia.org//wiki/Requirements_analysis
+
+
+Gerald Edelman - Wikipedia
+Page counter: 605 Term counter: 2 url: https://en.wikipedia.org//wiki/Gerald_Edelman
+
+
+Software design - Wikipedia
+Page counter: 606 Term counter: 38 url: https://en.wikipedia.org//wiki/Software_design
+
+
+Machine learning | artificial intelligence | Britannica
+Page counter: 607 Term counter: 11 url: https://www.britannica.com/technology/machine-learning
+
+
+Software deployment - Wikipedia
+Page counter: 608 Term counter: 2 url: https://en.wikipedia.org//wiki/Software_deployment
+
+
+Roger Bacon - Wikipedia
+Page counter: 609 Term counter: 9 url: https://en.wikipedia.org//wiki/Roger_Bacon
+
+
+Software maintenance - Wikipedia
+Page counter: 610 Term counter: 29 url: https://en.wikipedia.org//wiki/Software_maintenance
+
+
+Open-source software - Wikipedia
+Page counter: 611 Term counter: 4 url: https://en.wikipedia.org//wiki/Open-source_software
+
+
+Allen Newell | American computer scientist | Britannica
+Page counter: 612 Term counter: 3 url: https://www.britannica.com/biography/Allen-Newell
+
+
+Francis Bacon - Wikipedia
+Page counter: 613 Term counter: 3 url: https://en.wikipedia.org//wiki/Francis_Bacon
+
+
+Alan Turing | Biography, Facts, & Education | Britannica
+Page counter: 614 Term counter: 2 url: https://www.britannica.com/biography/Alan-Turing
+
+
+Glossary of aerospace engineering - Wikipedia
+Page counter: 615 Term counter: 10 url: https://en.wikipedia.org//wiki/Glossary_of_aerospace_engineering
+
+
+Ray Kurzweil | Biography, Predictions, Books, & Facts | Britannica
+Page counter: 616 Term counter: 5 url: https://www.britannica.com/biography/Raymond-Kurzweil
+
+
+Glossary of archaeology - Wikipedia
+Page counter: 617 Term counter: 2 url: https://en.wikipedia.org//wiki/Glossary_of_archaeology
+
+
+Isaac Newton - Wikipedia
+Page counter: 618 Term counter: 7 url: https://en.wikipedia.org//wiki/Isaac_Newton
+
+
+Judea Pearl | Israeli-American computer scientist | Britannica
+Page counter: 619 Term counter: 2 url: https://www.britannica.com/biography/Judea-Pearl
+
+
+Raj Reddy | Indian computer scientist | Britannica
+Page counter: 620 Term counter: 2 url: https://www.britannica.com/biography/Raj-Reddy
+
+
+Donald Michie | British computer scientist | Britannica
+Page counter: 621 Term counter: 3 url: https://www.britannica.com/biography/Donald-Michie
+
+
+Friedrich Wilhelm Joseph Schelling - Wikipedia
+Page counter: 622 Term counter: 3 url: https://en.wikipedia.org//wiki/Friedrich_Wilhelm_Joseph_Schelling
+
+
+William Whewell - Wikipedia
+Page counter: 623 Term counter: 3 url: https://en.wikipedia.org//wiki/William_Whewell
+
+
+Computational aesthetics | computer science and artificial intelligence | Britannica
+Page counter: 624 Term counter: 2 url: https://www.britannica.com/topic/computational-aesthetics
+
+
+Auguste Comte - Wikipedia
+Page counter: 625 Term counter: 3 url: https://en.wikipedia.org//wiki/Auguste_Comte
+
+
+Neural network | computing | Britannica
+Page counter: 626 Term counter: 6 url: https://www.britannica.com/technology/neural-network
+
+
+John Stuart Mill - Wikipedia
+Page counter: 627 Term counter: 2 url: https://en.wikipedia.org//wiki/John_Stuart_Mill
+
+
+Expert system | computer science | Britannica
+Page counter: 628 Term counter: 7 url: https://www.britannica.com/technology/expert-system
+
+
+Jeff Hawkins - Wikipedia
+Page counter: 629 Term counter: 4 url: https://en.wikipedia.org//wiki/Jeff_Hawkins
+
+
+On Intelligence - Wikipedia
+Page counter: 630 Term counter: 6 url: https://en.wikipedia.org//wiki/On_Intelligence
+
+
+Gödel, Escher, Bach - Wikipedia
+Page counter: 631 Term counter: 5 url: https://en.wikipedia.org//wiki/G%C3%B6del,_Escher,_Bach
+
+
+Daniel Kahneman - Wikipedia
+Page counter: 632 Term counter: 16 url: https://en.wikipedia.org//wiki/Daniel_Kahneman
+
+
+Amos Tversky - Wikipedia
+Page counter: 633 Term counter: 10 url: https://en.wikipedia.org//wiki/Amos_Tversky
+
+
