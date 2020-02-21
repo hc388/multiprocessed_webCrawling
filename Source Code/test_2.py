@@ -1,5 +1,5 @@
 r = open('/Users/hrithik/PycharmProjects/testpy/Webpages.txt','r')
-w = open('/Users/hrithik/PycharmProjects/testpy/Final_Webpage_List.txt','w')
+w = open('/Users/hrithik/PycharmProjects/testpy/Report.txt','w')
 count = 1
 line_list = r.readlines()
 other_list = []
